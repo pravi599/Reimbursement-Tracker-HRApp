@@ -35,6 +35,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="paymentDetailsDTO">The payment details DTO.</param>
         /// <returns>Returns the result of the operation.</returns>
+        [Authorize(Roles = "HR")]
         [HttpPost]
         public IActionResult AddPaymentDetails([FromBody] PaymentDetailsDTO paymentDetailsDTO)
         {
@@ -62,6 +63,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="paymentId">The ID of the payment details to be removed.</param>
         /// <returns>Returns the result of the operation.</returns>
+        [Authorize(Roles = "HR")]
         [HttpDelete("{paymentId}")]
         public ActionResult RemovePaymentDetails(int paymentId)
         {
@@ -94,7 +96,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// <summary>
         /// Updates payment details.
         /// </summary>
-        /// <param name="paymentDetailsDTO">The updated payment details DTO.</param>
+        /// <param name = "paymentDetailsDTO" > The updated payment details DTO.</param>
         /// <returns>Returns the result of the operation.</returns>
         [HttpPut]
         public IActionResult UpdatePaymentDetails([FromBody] PaymentDetailsDTO paymentDetailsDTO)
@@ -130,6 +132,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="paymentId">The ID of the payment details to be retrieved.</param>
         /// <returns>Returns the payment details DTO if found; otherwise, returns an error message.</returns>
+        [Authorize(Roles = "HR")]
         [HttpGet("{paymentId}")]
         public IActionResult GetPaymentDetailsById(int paymentId)
         {
@@ -163,6 +166,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// Gets all payment details.
         /// </summary>
         /// <returns>Returns a list of payment details DTOs if available; otherwise, returns an error message.</returns>
+        [Authorize(Roles = "HR")]
         [HttpGet]
         public IActionResult GetAllPaymentDetails()
         {

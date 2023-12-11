@@ -35,7 +35,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="trackingDTO">The data for tracking information.</param>
         /// <returns>The result of the tracking addition operation.</returns>
-
+        [Authorize(Roles = "Employee")]
         [HttpPost]
         public IActionResult AddTracking([FromBody] TrackingDTO trackingDTO)
         {
@@ -67,7 +67,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="trackingId">The ID of the tracking information to be removed.</param>
         /// <returns>The result of the tracking removal operation.</returns>
-
+        [Authorize(Roles = "Employee")]
         [HttpDelete("{trackingId}")]
         public ActionResult RemoveTracking(int trackingId)
         {
@@ -106,7 +106,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="trackingDTO">The data for updating tracking information.</param>
         /// <returns>The result of the tracking update operation.</returns>
-
+        [Authorize(Roles = "HR")]
         [HttpPut]
         public IActionResult UpdateTracking([FromBody] TrackingDTO trackingDTO)
         {
@@ -145,7 +145,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="trackingId">The ID of the tracking information to be retrieved.</param>
         /// <returns>The result of the tracking retrieval operation.</returns>
-
+        [Authorize(Roles = "HR")]
         [HttpGet("{trackingId}")]
         public IActionResult GetTrackingById(int trackingId)
         {
@@ -183,7 +183,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// Gets all tracking information.
         /// </summary>
         /// <returns>The result of the operation to get all tracking information.</returns>
-
+        [Authorize(Roles = "HR")]
         [HttpGet]
         public IActionResult GetAllTrackings()
         {
@@ -212,7 +212,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// <param name="requestId">The ID of the request to update the tracking status for.</param>
         /// <param name="trackingStatus">The new tracking status.</param>
         /// <returns>The result of the tracking status update operation.</returns>
-
+        [Authorize(Roles = "HR")]
         [HttpPut("{requestId}/{trackingStatus}")]
         public IActionResult UpdateTrackingStatus(int requestId, string trackingStatus)
         {
@@ -244,7 +244,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="requestId">The ID of the request associated with the tracking information.</param>
         /// <returns>The result of the tracking retrieval by request ID operation.</returns>
-
+        [Authorize(Roles = "HR")]
         [HttpGet("request/{requestId}")]
         public IActionResult GetTrackingByRequestId(int requestId)
         {
@@ -283,6 +283,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="username">The username of the user.</param>
         /// <returns>The result of the tracking retrieval by username operation.</returns>
+        [Authorize(Roles = "Employee")]
         [HttpGet("user/{username}")]
         public IActionResult GetTrackingsByUsername(string username)
         {

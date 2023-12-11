@@ -34,7 +34,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="userProfileDTO">The user profile data to add.</param>
         /// <returns>The result of the add operation.</returns>
-
+        [Authorize(Roles = "Employee")]
         [HttpPost]
         public IActionResult AddUserProfile([FromBody] UserProfileDTO userProfileDTO)
         {
@@ -61,7 +61,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="username">The username of the user profile to remove.</param>
         /// <returns>The result of the removal operation.</returns>
-
+        [Authorize(Roles = "Employee")]
         [HttpDelete("{username}")]
         public ActionResult RemoveUserProfile(string username)
         {
@@ -95,7 +95,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="userProfileDTO">The user profile data to update.</param>
         /// <returns>The result of the update operation.</returns>
-
+        [Authorize(Roles = "Employee")]
         [HttpPut]
         public IActionResult UpdateUserProfile([FromBody] UserProfileDTO userProfileDTO)
         {
@@ -129,7 +129,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="userId">The ID of the user profile to retrieve.</param>
         /// <returns>The user profile with the given ID.</returns>
-
+        [Authorize(Roles = "Employee")]
         [HttpGet("{userId}")]
         public IActionResult GetUserProfileById(int userId)
         {
@@ -163,7 +163,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="username">The username of the user profile to retrieve.</param>
         /// <returns>The user profile with the given username.</returns>
-
+        [Authorize(Roles = "Employee")]
         [HttpGet("username/{username}")]
         public IActionResult GetUserProfileByUsername(string username)
         {
@@ -196,7 +196,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// Gets all user profiles.
         /// </summary>
         /// <returns>A list of all user profiles.</returns>
-
+        [Authorize(Roles = "HR")]
         [HttpGet]
         public IActionResult GetAllUserProfiles()
         {

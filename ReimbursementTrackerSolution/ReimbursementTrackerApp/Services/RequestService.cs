@@ -5,8 +5,17 @@ using ReimbursementTrackerApp.Exceptions;
 
 namespace ReimbursementTrackerApp.Services
 {
+    /// <summary>
+    /// Service class for managing reimbursement request operations.
+    /// </summary>
     public class RequestService : IRequestService
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RequestService"/> class.
+        /// </summary>
+        /// <param name="requestRepository">Repository for reimbursement requests.</param>s
+        /// <param name="trackingRepository">Repository for tracking information.</param>
+        /// <param name="hostingEnvironment">Hosting environment for file operations.</param>
         private readonly IRepository<int, Request> _requestRepository;
         private readonly IRepository<int, Tracking> _trackingRepository;
         private readonly IWebHostEnvironment _hostingEnvironment;
@@ -21,7 +30,11 @@ namespace ReimbursementTrackerApp.Services
             _hostingEnvironment = hostingEnvironment;
         }
 
-
+        /// <summary>
+        /// Adds a new reimbursement request and associated tracking information.
+        /// </summary>
+        /// <param name="requestDTO">DTO containing request information.</param>
+        /// <returns>True if the addition is successful.</returns>
         public bool Add(RequestDTO requestDTO)
         {
             var documentPath = SaveDocument(requestDTO.Document);
@@ -51,7 +64,11 @@ namespace ReimbursementTrackerApp.Services
             return true;
         }
 
-
+        /// <summary>
+        /// Private helper method to save documents associated with a request.
+        /// </summary>
+        /// <param name="document">Document file to be saved.</param>
+        /// <returns>Path to the saved document.</returns>
         private string SaveDocument(IFormFile document)
         {
             if (document != null && document.Length > 0)
@@ -71,7 +88,11 @@ namespace ReimbursementTrackerApp.Services
             return null;
         }
 
-
+        /// <summary>
+        /// Removes a reimbursement request based on the provided request ID.
+        /// </summary>
+        /// <param name="requestId">ID of the request to be removed.</param>
+        /// <returns>True if the removal is successful.</returns>
         public bool Remove(int requestId)
         {
             var request = _requestRepository.Delete(requestId);
@@ -83,7 +104,11 @@ namespace ReimbursementTrackerApp.Services
 
             throw new RequestNotFoundException();
         }
-
+        /// <summary>
+        /// Updates an existing reimbursement request based on the provided DTO.
+        /// </summary>
+        /// <param name="requestDTO">DTO containing updated request information.</param>
+        /// <returns>Updated request DTO.</returns>
         public RequestDTO Update(RequestDTO requestDTO)
         {
             var existingRequest = _requestRepository.GetById(requestDTO.RequestId);
@@ -112,8 +137,11 @@ namespace ReimbursementTrackerApp.Services
             throw new RequestNotFoundException();
         }
 
-
-
+        /// <summary>
+        /// Retrieves a reimbursement request DTO based on the provided request ID.
+        /// </summary>
+        /// <param name="requestId">ID of the requested reimbursement.</param>
+        /// <returns>Request DTO if found.</returns>
 
         public RequestDTO GetRequestById(int requestId)
         {
@@ -138,9 +166,11 @@ namespace ReimbursementTrackerApp.Services
             throw new RequestNotFoundException();
         }
 
-
-
-
+        /// <summary>
+        /// Retrieves a reimbursement request based on the provided expense category.
+        /// </summary>
+        /// <param name="expenseCategory">Expense category of the requested reimbursement.</param>
+        /// <returns>Requested reimbursement.</returns>
         public Request GetRequestsByCategory(string expenseCategory)
         {
             var existingRequest = _requestRepository.GetAll()
@@ -162,6 +192,12 @@ namespace ReimbursementTrackerApp.Services
 
             throw new RequestNotFoundException();
         }
+
+        /// <summary>
+        /// Retrieves all reimbursement requests for a given username.
+        /// </summary>
+        /// <param name="username">Username of the requests to be retrieved.</param>
+        /// <returns>Collection of reimbursement requests.</returns>
         public IEnumerable<Request> GetRequestsByUsername(string username)
         {
             var requests = _requestRepository.GetAll()
@@ -179,6 +215,10 @@ namespace ReimbursementTrackerApp.Services
             }).ToList();
         }
 
+        /// <summary>
+        /// Retrieves all reimbursement requests.
+        /// </summary>
+        /// <returns>Collection of all reimbursement requests.</returns>
         public IEnumerable<Request> GetAllRequests()
         {
             var requests = _requestRepository.GetAll();
@@ -195,7 +235,11 @@ namespace ReimbursementTrackerApp.Services
             }).ToList();
         }
 
-
+        /// <summary>
+        /// Private helper method to get a document as an IFormFile.
+        /// </summary>
+        /// <param name="documentPath">Path to the document.</param>
+        /// <returns>Document as IFormFile.</returns>
         private IFormFile GetDocumentAsFormFile(string documentPath)
         {
             try
@@ -219,9 +263,6 @@ namespace ReimbursementTrackerApp.Services
 
             return null;
         }
-
-
-
 
     }
 }
