@@ -39,7 +39,7 @@ function App() {
           <Route path="/AddPayment" element={<AddPayment/>}/>
           <Route path="/GetPayments" element={<GetPayments/>}/>
           <Route path="/UserRequests" element={<UserRequests/>}/>
-          <Route path="/Trackings" element={<TrackingComponent/>}/>
+          <Route path="/Tracking" element={<TrackingComponent/>}/>
 
         </Routes>
       </BrowserRouter>

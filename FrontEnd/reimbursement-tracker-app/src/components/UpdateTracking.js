@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Requests.css';
+import { message } from "antd";
 
-const UpdateTracking = ({ requestId, trackingDetails, onUpdateTracking, onClose }) => {
+const UpdateTracking = ({ requestId, trackingDetails, onUpdateTracking, onClose, username }) => {
   const [trackingStatus, setTrackingStatus] = useState(trackingDetails.trackingStatus || '');
   const [approvalDate, setApprovalDate] = useState(trackingDetails.approvalDate || '');
   const [reimbursementDate, setReimbursementDate] = useState(trackingDetails.reimbursementDate || '');
 
+  //console.log;
   const handleUpdate = async () => {
     const updatedTracking = {
       trackingId: trackingDetails.trackingId,
@@ -13,6 +16,43 @@ const UpdateTracking = ({ requestId, trackingDetails, onUpdateTracking, onClose 
       trackingStatus: trackingStatus,
       approvalDate: approvalDate,
       reimbursementDate: reimbursementDate,
+    };
+    localStorage.setItem('Trackusername', username);
+    const email = String(localStorage.getItem("Trackusername")) || username;
+
+    const sendEmail = async () => {
+      try {
+        const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+
+          },
+          body: JSON.stringify({
+
+            service_id: 'service_n4mw93i',
+            template_id: 'template_ijlup9j',
+            user_id: 'yKBDhfI1SwLvmocO0',
+            template_params: {
+              to_email: email,
+              message: `Dear ${username},\n\nWe are pleased to inform you that your reimbursement request with Request ID ${requestId} has been ${trackingStatus.toLowerCase()}.\n\nApproval Date: ${approvalDate}\nReimbursement Date: ${reimbursementDate}\n\nThank you for your prompt attention to this matter.`,
+              'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...',
+            },
+          }),
+        });
+
+
+        if (!response.ok) {
+          console.error('EmailJS request failed:', response.statusText);
+          // Handle the error as needed
+        } else {
+          message.success('Email sent successfully!');
+          // Handle success
+        }
+      } catch (error) {
+        message.error('Error sending email:', error);
+        // Handle the error as needed
+      }
     };
 
     try {
@@ -22,6 +62,7 @@ const UpdateTracking = ({ requestId, trackingDetails, onUpdateTracking, onClose 
       // Handle the response (log, show a message, etc.)
       console.log(response.data);
       alert('Tracking Status Updated Successfully');
+      sendEmail();
 
       // Close the modal after updating
       onClose();
@@ -54,7 +95,7 @@ const UpdateTracking = ({ requestId, trackingDetails, onUpdateTracking, onClose 
       <label>
         Approval Date:
         <input
-          type="date"
+          type="datetime-local"
           name="approvalDate"
           value={approvalDate}
           onChange={(e) => setApprovalDate(e.target.value)}
@@ -64,7 +105,7 @@ const UpdateTracking = ({ requestId, trackingDetails, onUpdateTracking, onClose 
       <label>
         Reimbursement Date:
         <input
-          type="date"
+          type="datetime-local"
           name="reimbursementDate"
           value={reimbursementDate}
           onChange={(e) => setReimbursementDate(e.target.value)}
@@ -72,8 +113,8 @@ const UpdateTracking = ({ requestId, trackingDetails, onUpdateTracking, onClose 
       </label>
 
       <div>
-        <button className="btn-primary" onClick={handleUpdate}>Update Tracking</button>
-        <button className="btn-danger" onClick={onClose}>Cancel</button>
+        <button onClick={handleUpdate}>Update Tracking</button>
+        <button onClick={onClose}>Cancel</button>
       </div>
     </div>
   );

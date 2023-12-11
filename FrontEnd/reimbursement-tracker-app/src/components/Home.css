@@ -29,9 +29,7 @@ p {
   flex: 1;
   box-sizing: border-box;
   padding: 20px;
-  backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.1);
-  background-color: aqua;
+  background-color: transparent;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 0 10px 20px; /* Add space between features */

@@ -1,20 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
-import {
-  FaBars ,
-  FaUserAlt,
-  FaIdCard,
-  FaList,
-  FaPlusSquare,
-  FaRegListAlt,
-  FaMapMarkerAlt,
-  FaUsers,
-  FaListAlt,
-  FaMoneyBillAlt,
-  FaDollarSign,
-  FaRegFileAlt,
-  FaHome
-} from 'react-icons/fa';
+import {FaBars ,FaUserAlt,FaIdCard,FaList,FaPlusSquare,FaRegListAlt,FaMapMarkerAlt,FaUsers,FaListAlt,
+  FaSignInAlt,FaSignOutAlt,FaMoneyBillAlt,FaDollarSign,FaRegFileAlt,FaHome} from 'react-icons/fa';
 import './Menu.css';
 
 const Menu = () => {
@@ -74,7 +61,7 @@ const Menu = () => {
   <>
     {!isLoggedIn ? (
       <NavLink to="/Login" className={`nav-link ${location.pathname === '/Login' ? 'active-link' : ''}`}>
-        Login
+        <FaSignInAlt/>Login
       </NavLink>
     ) : (
                 <>
@@ -87,7 +74,7 @@ const Menu = () => {
                     <>
                       <div className="profile-dropdown">
                         <div className={`nav-link ${isProfileDropdownOpen ? 'active-link' : ''}`} onClick={toggleProfileDropdown}>
-                          Profiles
+                         <FaUserAlt/>Profiles
                         </div>
                         {isProfileDropdownOpen && (
                           <div className="dropdown-content">
@@ -129,7 +116,7 @@ const Menu = () => {
                         )}
                       </div>
 
-                      <NavLink to="/Trackings" className={`nav-link ${location.pathname === '/Trackings' ? 'active-link' : ''}`}>
+                      <NavLink to="/Tracking" className={`nav-link ${location.pathname === '/Tracking' ? 'active-link' : ''}`}>
                         <FaMapMarkerAlt /> Trackings
                       </NavLink>
                     </>
@@ -173,7 +160,7 @@ const Menu = () => {
                   )}
 
                   <div className="nav-link logout-button" onClick={logout}>
-                    Logout
+                   <FaSignOutAlt/> Logout
                   </div>
                 </>
               )}

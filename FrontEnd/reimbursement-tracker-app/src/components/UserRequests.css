@@ -10,7 +10,7 @@
 .request-box {
   border: 2px solid #ccc;
   padding: 16px;
-  
+  margin:8px;
   width: 300px;
 }
 
