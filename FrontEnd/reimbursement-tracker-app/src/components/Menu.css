@@ -5,7 +5,7 @@ body {
 }
 
 .header {
-  background-color: #007bff;
+  background-color:#001F3F;
   color: #fff;
   padding: 20px;
   position: fixed;
@@ -86,14 +86,14 @@ body {
 .payment-dropdown .dropdown-content .nav-link:hover,
 .request-dropdown .dropdown-content .nav-link:hover {
   background-color: #f0f0f0;
-  color: #0066cc; /* Adjust the color as needed */
+  color: darkmagenta; /* Adjust the color as needed */
 }
 
 .active-link,
 .profile-dropdown:hover .nav-link,
 .payment-dropdown:hover .nav-link,
 .request-dropdown:hover .nav-link {
-  color: #1100cc;
+  color: violet;
 }
 
 /* Media Query for Responsive Design */

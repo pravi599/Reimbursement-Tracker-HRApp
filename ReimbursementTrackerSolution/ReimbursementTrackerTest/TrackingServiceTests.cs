@@ -54,7 +54,7 @@ namespace ReimbursementTrackerApp.Tests
                 RequestDate = DateTime.Now
             };
 
-            // Add the request
+            // Adding the request
             requestService.Add(requestDTO);
 
             var trackingDTO = new TrackingDTO
@@ -114,7 +114,7 @@ namespace ReimbursementTrackerApp.Tests
                 ReimbursementDate = DateTime.Now.AddDays(1)
             };
 
-            // Add the tracking information
+            // Adding the tracking information
             trackingService.Add(trackingDTO);
 
             // Act
@@ -146,7 +146,7 @@ namespace ReimbursementTrackerApp.Tests
                 RequestDate = DateTime.Now
             };
 
-            // Add the request
+            // Adding the request
             requestService.Add(requestDTO);
 
             var trackingDTO = new TrackingDTO
@@ -158,7 +158,7 @@ namespace ReimbursementTrackerApp.Tests
                 ReimbursementDate = null
             };
 
-            // Add the tracking information
+            // Adding the tracking information
             trackingService.Add(trackingDTO);
 
             var updatedTrackingDTO = new TrackingDTO
@@ -209,7 +209,7 @@ namespace ReimbursementTrackerApp.Tests
                 RequestDate = DateTime.Now
             };
 
-            // Add the request
+            // Adding the request
             requestService.Add(requestDTO);
 
             var trackingDTO = new TrackingDTO
@@ -220,7 +220,7 @@ namespace ReimbursementTrackerApp.Tests
                 ReimbursementDate = DateTime.Now.AddDays(1)
             };
 
-            // Add the tracking information
+            // Adding the tracking information
             trackingService.Add(trackingDTO);
 
             // Act
@@ -253,7 +253,7 @@ namespace ReimbursementTrackerApp.Tests
                 RequestDate = DateTime.Now
             };
 
-            // Add the request
+            // Adding the request
             requestService.Add(requestDTO);
 
             var trackingDTO = new TrackingDTO
@@ -265,7 +265,7 @@ namespace ReimbursementTrackerApp.Tests
                 ReimbursementDate = DateTime.Now.AddDays(1)
             };
 
-            // Add the tracking information
+            // Adding the tracking information
             trackingService.Add(trackingDTO);
 
             // Act
@@ -309,7 +309,7 @@ namespace ReimbursementTrackerApp.Tests
                 RequestDate = DateTime.Now
             };
 
-            // Add the requests
+            // Adding the requests
             requestService.Add(requestDTO1);
             requestService.Add(requestDTO2);
 

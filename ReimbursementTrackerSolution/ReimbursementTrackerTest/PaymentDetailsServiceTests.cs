@@ -66,7 +66,7 @@ namespace ReimbursementTrackerApp.Tests
                 PaymentDate = DateTime.Now
             };
 
-            // Add the first payment details
+            // Adding the first payment details
             paymentDetailsService.Add(paymentDetailsDTO);
 
             // Act & Assert
@@ -88,7 +88,7 @@ namespace ReimbursementTrackerApp.Tests
                 PaymentDate = DateTime.Now
             };
 
-            // Add the payment details
+            // Adding the payment details
             paymentDetailsService.Add(paymentDetailsDTO);
 
             // Act
@@ -131,7 +131,7 @@ namespace ReimbursementTrackerApp.Tests
                 PaymentDate = DateTime.Now.AddDays(1)
             };
 
-            // Add the payment details
+            // Adding the payment details
             paymentDetailsService.Add(paymentDetailsDTO);
 
             // Act
@@ -176,7 +176,7 @@ namespace ReimbursementTrackerApp.Tests
                 PaymentDate = DateTime.Now
             };
 
-            // Add the payment details
+            // Adding the payment details
             paymentDetailsService.Add(paymentDetailsDTO);
 
             // Act
@@ -222,7 +222,7 @@ namespace ReimbursementTrackerApp.Tests
                 PaymentDate = DateTime.Now.AddDays(1)
             };
 
-            // Add the payment details
+            // Adding the payment details
             paymentDetailsService.Add(paymentDetailsDTO1);
             paymentDetailsService.Add(paymentDetailsDTO2);
 

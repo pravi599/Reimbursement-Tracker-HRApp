@@ -7,7 +7,7 @@ namespace ReimbursementTrackerApp.Models
     {
         [Key]
         public int UserId { get; set; }
-        public string Username { get; set; } //ForeignKey
+        public string Username { get; set; } //Foreign Key
         public string FirstName { get; set; }
         public string LastName{ get; set; }
         public string City { get; set; }

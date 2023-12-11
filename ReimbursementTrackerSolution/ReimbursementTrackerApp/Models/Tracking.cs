@@ -7,7 +7,7 @@ namespace ReimbursementTrackerApp.Models
     {
         [Key]
         public int TrackingId { get; set; }
-        public int RequestId {  get; set; }
+        public int RequestId {  get; set; } //Foreign Key
 
         [ForeignKey("RequestId")]
         public Request? Request { get; set; }

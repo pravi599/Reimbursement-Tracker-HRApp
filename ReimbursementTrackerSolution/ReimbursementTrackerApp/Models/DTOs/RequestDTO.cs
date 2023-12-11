@@ -9,8 +9,6 @@ namespace ReimbursementTrackerApp.Models.DTOs
         public string ExpenseCategory { get; set; }
         public float Amount { get; set; }
         public IFormFile? Document { get; set; }
-     /*   public string DocumentBase64 { get; set; } //base64-encoded document content*/
-        //public string Receipt { get; set; }
         public string Description { get; set; }
         public DateTime RequestDate { get; set; }
     }

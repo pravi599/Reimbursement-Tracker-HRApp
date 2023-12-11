@@ -75,7 +75,7 @@ namespace ReimbursementTrackerApp.Tests
                 RequestDate = DateTime.Now
             };
 
-            // Add the request
+            // Adding the request
             requestService.Add(requestDTO);
 
             // Act
@@ -117,7 +117,7 @@ namespace ReimbursementTrackerApp.Tests
                 RequestDate = DateTime.Now.AddDays(1)
             };
 
-            // Add the request
+            // Adding the request
             requestService.Add(requestDTO);
 
             // Act
@@ -161,7 +161,7 @@ namespace ReimbursementTrackerApp.Tests
                 RequestDate = DateTime.Now
             };
 
-            // Add the request
+            // Adding the request
             requestService.Add(requestDTO);
 
             // Act
@@ -194,7 +194,7 @@ namespace ReimbursementTrackerApp.Tests
                 RequestDate = DateTime.Now
             };
 
-            // Add the request
+            // Adding the request
             requestService.Add(requestDTO);
 
             // Act
@@ -227,7 +227,7 @@ namespace ReimbursementTrackerApp.Tests
                 RequestDate = DateTime.Now
             };
 
-            // Add the request
+            // Adding the request
             requestService.Add(requestDTO);
 
             // Act
@@ -264,7 +264,7 @@ namespace ReimbursementTrackerApp.Tests
                 RequestDate = DateTime.Now.AddDays(1)
             };
 
-            // Add the requests
+            // Adding the requests
             requestService.Add(requestDTO1);
             requestService.Add(requestDTO2);
 

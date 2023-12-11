@@ -1,0 +1,19 @@
+
+
+Microsoft.EntityFrameworkCore.Sql - 6.0.24
+Microsoft.EntityFrameworkCore - 6.0.24
+Microsoft.EntityFrameworkCore.Tools - 6.0.24
+Microsoft.VisualStudio.Web.CodeGeneration.Design - 6.0.24
+Microsoft.AspNetCore.Authentication.JwtBearer - 6.0.24
+Microsoft.EntityFrameworkCore.InMemory - 6.0.25
+Swashbuckle.AspNetCore - 6.5.0
+Microsoft.Extensions.Logging.Log4Net.AspNetCore - 6.1.0
+
+
+
+
+npm i axios
+npm i react-router-dom
+npm i @reduxjs/toolkit
+npm install react-icons
+npm install antd

@@ -61,7 +61,7 @@ public class UserProfileServiceTests
             BankAccountNumber = "9876543210"
         };
 
-        // Add the first profile
+        // Adding the first profile
         userProfileService.Add(userProfileDTO);
 
     }
@@ -80,7 +80,7 @@ public class UserProfileServiceTests
             BankAccountNumber = "9876543210"
         };
 
-        // Add the profile
+        // Adding the profile
         userProfileService.Add(userProfileDTO);
 
         // Act
@@ -122,7 +122,7 @@ public class UserProfileServiceTests
             BankAccountNumber = "9876543210"
         };
 
-        // Add the profile
+        // Adding the profile
         userProfileService.Add(userProfileDTO);
 
 
@@ -170,7 +170,7 @@ public class UserProfileServiceTests
             BankAccountNumber = "9876543210"
         };
 
-        // Add the profile
+        // Adding the profile
         var isAdded = userProfileService.Add(userProfileDTO);
 
         // Act
@@ -204,7 +204,7 @@ public class UserProfileServiceTests
             BankAccountNumber = "9876543210"
         };
 
-        // Add the profile
+        // Adding the profile
         userProfileService.Add(userProfileDTO);
 
         // Act
@@ -245,7 +245,7 @@ public class UserProfileServiceTests
             BankAccountNumber = "1234567890"
         };
 
-        // Add the profiles
+        // Adding the profiles
         userProfileService.Add(userProfileDTO1);
         userProfileService.Add(userProfileDTO2);
 
@@ -255,6 +255,4 @@ public class UserProfileServiceTests
         // Assert
         Assert.AreEqual(2, allProfiles.Count());
     }
-
-    // Your test methods go here
 }

@@ -1,0 +1,17 @@
+Login,Register (common)
+-----------------------
+
+Employee
+----------------
+1)Profiles Dropdown(Add Profile, User Profile)
+2)Requests Dropdown(Add Request, User Requests)
+3)Tracking
+
+
+
+HR
+-----
+
+1) User Profiles
+2)View All Requests
+3)Payments Dropdown(Make Payment, View Payments)

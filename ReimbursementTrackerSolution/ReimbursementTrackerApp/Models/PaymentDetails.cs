@@ -5,7 +5,7 @@ namespace ReimbursementTrackerApp.Models
 {
     public class PaymentDetails
     {
-        public int RequestId { get; set; }
+        public int RequestId { get; set; } //Foreign Key
         [Key]
         public int PaymentId { get; set; }
         public string CardNumber { get; set; }
