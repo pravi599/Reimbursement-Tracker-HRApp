@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6neQEtUwuDkwSLxsheJDS9gj9tAgcO0nzDNCgl6DeoE=",
+  "Hash": "n/AjPkRnh6ozKZB9bKsp8JJjhl6GgSeVZGEtLLrz/jc=",
   "Source": "ReimbursementTrackerApp",
   "BasePath": "_content/ReimbursementTrackerApp",
   "Mode": "Default",
@@ -15,5 +15,44 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "D:\\Project\\ReimbursementTrackerSolution\\ReimbursementTrackerApp\\wwwroot\\Documents\\42316596-c2ae-4aab-bf8a-86c73364c01d_TutionFees.png",
+      "SourceId": "ReimbursementTrackerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\ReimbursementTrackerSolution\\ReimbursementTrackerApp\\wwwroot\\",
+      "BasePath": "_content/ReimbursementTrackerApp",
+      "RelativePath": "Documents/42316596-c2ae-4aab-bf8a-86c73364c01d_TutionFees.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\42316596-c2ae-4aab-bf8a-86c73364c01d_TutionFees.png"
+    },
+    {
+      "Identity": "D:\\Project\\ReimbursementTrackerSolution\\ReimbursementTrackerApp\\wwwroot\\Documents\\fe2aac49-5bfc-455c-9bad-6bffc25269df_Medical Report.png",
+      "SourceId": "ReimbursementTrackerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\ReimbursementTrackerSolution\\ReimbursementTrackerApp\\wwwroot\\",
+      "BasePath": "_content/ReimbursementTrackerApp",
+      "RelativePath": "Documents/fe2aac49-5bfc-455c-9bad-6bffc25269df_Medical Report.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\fe2aac49-5bfc-455c-9bad-6bffc25269df_Medical Report.png"
+    }
+  ]
 }
