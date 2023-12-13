@@ -139,7 +139,7 @@ const AddPayment = () => {
           <div>
             <label htmlFor="PaymentDate">Payment Date:</label>
             <input
-              type="date"
+              type="datetime-local"
               id="PaymentDate"
               name="PaymentDate"
               value={paymentData.PaymentDate}
