@@ -1,5 +1,7 @@
 /* UserProfiles.css */
-
+body{
+  height: 100vh;
+}
 .userProfilesContainer {
   margin: 10px;
   padding-top: 5px;
@@ -45,7 +47,7 @@ tbody tr:hover {
   }
 
   .userProfilesTable th {
-    display:flex; /* Hide table headers in small screens */
+    display:none; /* Hide table headers in small screens */
   }
 
   .userProfilesTable td {

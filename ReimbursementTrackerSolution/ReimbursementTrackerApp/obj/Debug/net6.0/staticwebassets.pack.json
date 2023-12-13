@@ -1,12 +1,12 @@
 {
   "Files": [
     {
-      "Id": "D:\\Project\\ReimbursementTrackerSolution\\ReimbursementTrackerApp\\wwwroot\\Documents\\42316596-c2ae-4aab-bf8a-86c73364c01d_TutionFees.png",
-      "PackagePath": "staticwebassets\\Documents\\42316596-c2ae-4aab-bf8a-86c73364c01d_TutionFees.png"
+      "Id": "D:\\Project\\ReimbursementTrackerSolution\\ReimbursementTrackerApp\\wwwroot\\Documents\\1ad17e8b-233f-4bc0-922e-4181436e87e7_Medical Report.png",
+      "PackagePath": "staticwebassets\\Documents\\1ad17e8b-233f-4bc0-922e-4181436e87e7_Medical Report.png"
     },
     {
-      "Id": "D:\\Project\\ReimbursementTrackerSolution\\ReimbursementTrackerApp\\wwwroot\\Documents\\fe2aac49-5bfc-455c-9bad-6bffc25269df_Medical Report.png",
-      "PackagePath": "staticwebassets\\Documents\\fe2aac49-5bfc-455c-9bad-6bffc25269df_Medical Report.png"
+      "Id": "D:\\Project\\ReimbursementTrackerSolution\\ReimbursementTrackerApp\\wwwroot\\Documents\\b73ff5a3-cee8-4e98-944b-68ebca8b0f84_TutionFees.png",
+      "PackagePath": "staticwebassets\\Documents\\b73ff5a3-cee8-4e98-944b-68ebca8b0f84_TutionFees.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ReimbursementTrackerApp.Microsoft.AspNetCore.StaticWebAssets.props",

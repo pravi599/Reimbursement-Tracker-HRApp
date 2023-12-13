@@ -1,11 +1,11 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\42316596-c2ae-4aab-bf8a-86c73364c01d_TutionFees.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\1ad17e8b-233f-4bc0-922e-4181436e87e7_Medical Report.png))">
       <SourceType>Package</SourceType>
       <SourceId>ReimbursementTrackerApp</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ReimbursementTrackerApp</BasePath>
-      <RelativePath>Documents/42316596-c2ae-4aab-bf8a-86c73364c01d_TutionFees.png</RelativePath>
+      <RelativePath>Documents/1ad17e8b-233f-4bc0-922e-4181436e87e7_Medical Report.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -14,14 +14,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\42316596-c2ae-4aab-bf8a-86c73364c01d_TutionFees.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\1ad17e8b-233f-4bc0-922e-4181436e87e7_Medical Report.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\fe2aac49-5bfc-455c-9bad-6bffc25269df_Medical Report.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\b73ff5a3-cee8-4e98-944b-68ebca8b0f84_TutionFees.png))">
       <SourceType>Package</SourceType>
       <SourceId>ReimbursementTrackerApp</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ReimbursementTrackerApp</BasePath>
-      <RelativePath>Documents/fe2aac49-5bfc-455c-9bad-6bffc25269df_Medical Report.png</RelativePath>
+      <RelativePath>Documents/b73ff5a3-cee8-4e98-944b-68ebca8b0f84_TutionFees.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -30,7 +30,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\fe2aac49-5bfc-455c-9bad-6bffc25269df_Medical Report.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\b73ff5a3-cee8-4e98-944b-68ebca8b0f84_TutionFees.png))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

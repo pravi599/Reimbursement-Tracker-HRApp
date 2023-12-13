@@ -8,23 +8,22 @@ const AddRequest = () => {
     amount: 0,
     document: null,
     description: '',
-    requestDate: new Date().toISOString().slice(0, 10), // Set default date to today
+    requestDate: new Date().toISOString().slice(0, 10),
     customExpenseCategory: '',
     agreeToPolicies: false,
     showPolicies: false,
   };
-  const [requestData, setRequestData] = useState({ ...initialState})
+  const [requestData, setRequestData] = useState({ ...initialState });
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
-    // Retrieve username from local storage
     const username = localStorage.getItem('username');
-    // Set the username in the requestData state
     setRequestData((prevRequestData) => ({ ...prevRequestData, username }));
   }, []);
 
   const handleInputChange = (e) => {
     const { name, type, checked } = e.target;
-  
+
     if (type === 'file') {
       const fileInput = e.target;
       const file = fileInput.files[0];
@@ -33,21 +32,45 @@ const AddRequest = () => {
       setRequestData({ ...requestData, [name]: type === 'checkbox' ? checked : e.target.value });
     }
   };
-  
-  
-  
-  
+
+  const validateForm = () => {
+    const errors = {};
+
+    if (!requestData.expenseCategory || requestData.expenseCategory === 'Select Category') {
+      errors.expenseCategory = 'Please select an expense category.';
+    }
+
+    if (!requestData.amount || isNaN(requestData.amount) || requestData.amount <= 0) {
+      errors.amount = 'Please enter a valid amount greater than 0.';
+    }
+
+    if (!requestData.document) {
+      errors.document = 'Please upload a document.';
+    }
+
+    if (!requestData.description.trim()) {
+      errors.description = 'Please enter a description.';
+    }
+
+    setErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (!requestData.agreeToPolicies) {
       alert('Please agree to the reimbursement policies before submitting.');
       return;
     }
-  
+
+    if (!validateForm()) {
+      alert('Please fill out the required fields correctly.');
+      return;
+    }
+
     const categoryToSubmit = requestData.customExpenseCategory || requestData.expenseCategory;
-  
+
     try {
       const formData = new FormData();
       formData.append('expenseCategory', categoryToSubmit);
@@ -56,9 +79,9 @@ const AddRequest = () => {
       formData.append('description', requestData.description);
       formData.append('requestDate', requestData.requestDate);
       formData.append('username', requestData.username);
-  
+
       const response = await axios.post('https://localhost:7007/api/Request', formData);
-  
+
       console.log('Request added successfully:', response.data);
       alert('Request added successfully');
       setRequestData({ ...initialState });
@@ -67,11 +90,9 @@ const AddRequest = () => {
       alert('Failed to add Request. Please try again.');
     }
   };
-  
 
   const handleCancel = () => {
     window.history.back();
-    // Add logic to handle cancellation (e.g., redirect to another page)
     console.log('Operation canceled');
   };
 
@@ -83,7 +104,6 @@ const AddRequest = () => {
     <div className="addRequestContainer">
       <h2>Add Request</h2>
       <form onSubmit={handleSubmit}>
-
         <label>
           Expense Category:
           <select name="expenseCategory" value={requestData.expenseCategory} onChange={handleInputChange}>
@@ -93,7 +113,7 @@ const AddRequest = () => {
             <option value="Supplies">Supplies</option>
             <option value="Training">Training</option>
             <option value="Health">Health</option>
-            <option value="other">Other</option>ss
+            <option value="other">Other</option>
           </select>
         </label>
         {requestData.expenseCategory === 'other' && (
@@ -107,22 +127,25 @@ const AddRequest = () => {
             />
           </label>
         )}
+        {errors.expenseCategory && <div className="error">{errors.expenseCategory}</div>}
 
         <label>
           Amount:
           <input type="number" name="amount" value={requestData.amount} onChange={handleInputChange} />
         </label>
+        {errors.amount && <div className="error">{errors.amount}</div>}
 
         <label>
           Document:
           <input type="file" name="document" onChange={handleInputChange} />
         </label>
-
+        {errors.document && <div className="error">{errors.document}</div>}
 
         <label>
           Description:
           <textarea name="description" value={requestData.description} onChange={handleInputChange} />
         </label>
+        {errors.description && <div className="error">{errors.description}</div>}
 
         <label>
           Request Date:
@@ -160,7 +183,7 @@ const AddRequest = () => {
             checked={requestData.agreeToPolicies}
             onChange={handleInputChange}
           />
-         <p className='para'> I agree to the reimbursement policies </p>
+          <p className='para'> I agree to the reimbursement policies </p>
         </label>
 
         <div>

@@ -1,5 +1,7 @@
 /* AddProfile.css */
-
+body{
+  height: 100vh;
+}
 .addProfileContainer {
   display: flex;
   flex-direction: column;
@@ -42,6 +44,11 @@
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+.invalid-feedback {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .error {

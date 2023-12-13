@@ -66,6 +66,7 @@
   margin-bottom: 20px;
   width: 90vw;
   margin: 0 auto;
+  background-color: transparent;
 }
 
 .policies h3 {
@@ -78,7 +79,9 @@
 }
 
 .policies ul li {
+  list-style-type: style disc;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .checkbox-label {

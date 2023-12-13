@@ -1,10 +1,8 @@
-// AddProfile.js
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AddProfile.css';
 
 const AddProfile = () => {
-  // Get username from local storage
   const storedUsername = localStorage.getItem('username');
 
   const [profileData, setProfileData] = useState({
@@ -13,16 +11,49 @@ const AddProfile = () => {
     city: '',
     contactNumber: '',
     bankAccountNumber: '',
-    // Remove the 'username' field
   });
+
+  const [errors, setErrors] = useState({});
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setProfileData({ ...profileData, [name]: value });
   };
 
+  const validateForm = () => {
+    const errors = {};
+
+    if (!profileData.firstName.trim()) {
+      errors.firstName = 'Please enter your first name.';
+    }
+
+    if (!profileData.lastName.trim()) {
+      errors.lastName = 'Please enter your last name.';
+    }
+
+    if (!profileData.city.trim()) {
+      errors.city = 'Please enter your city.';
+    }
+
+    if (!profileData.contactNumber.trim()) {
+      errors.contactNumber = 'Please enter your contact number.';
+    }
+
+    if (!profileData.bankAccountNumber.trim()) {
+      errors.bankAccountNumber = 'Please enter your bank account number.';
+    }
+
+    setErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      alert('Please fill out the required fields correctly.');
+      return;
+    }
 
     try {
       const response = await axios.post('https://localhost:7007/api/UserProfile', profileData);
@@ -30,29 +61,27 @@ const AddProfile = () => {
       console.log('Profile added successfully:', response.data);
       alert('Profile added successfully');
     } catch (error) {
-      console.error('Error adding profile:', error.response.data);
+      console.error('Error adding profile:', error.response?.data);
       alert('Failed to add profile. Please try again.');
     }
   };
 
   const handleCancel = () => {
     window.history.back();
-    // Add logic to handle cancellation (e.g., redirect to another page)
     console.log('Operation canceled');
   };
 
-  // Set the 'username' field using the value retrieved from local storage
   useEffect(() => {
     setProfileData((prevData) => ({
       ...prevData,
       username: storedUsername || '',
     }));
   }, [storedUsername]);
+
   return (
     <div className="addProfileContainer">
-        <h2 className="addProfileHeader">Add Profile</h2>
+      <h2 className="addProfileHeader">Add Profile</h2>
       <div className="addProfileBox">
-      
         <form className="addProfileForm" onSubmit={handleSubmit}>
           <div className="fieldContainer">
             <label className="fieldLabel" htmlFor="username">
@@ -79,8 +108,9 @@ const AddProfile = () => {
               name="firstName"
               value={profileData.firstName}
               onChange={handleInputChange}
-              className="form-control"
+              className={`form-control ${errors.firstName ? 'is-invalid' : ''}`}
             />
+            {errors.firstName && <div className="invalid-feedback">{errors.firstName}</div>}
           </div>
 
           <div className="fieldContainer">
@@ -93,8 +123,9 @@ const AddProfile = () => {
               name="lastName"
               value={profileData.lastName}
               onChange={handleInputChange}
-              className="form-control"
+              className={`form-control ${errors.lastName ? 'is-invalid' : ''}`}
             />
+            {errors.lastName && <div className="invalid-feedback">{errors.lastName}</div>}
           </div>
 
           <div className="fieldContainer">
@@ -107,8 +138,9 @@ const AddProfile = () => {
               name="city"
               value={profileData.city}
               onChange={handleInputChange}
-              className="form-control"
+              className={`form-control ${errors.city ? 'is-invalid' : ''}`}
             />
+            {errors.city && <div className="invalid-feedback">{errors.city}</div>}
           </div>
 
           <div className="fieldContainer">
@@ -121,8 +153,9 @@ const AddProfile = () => {
               name="contactNumber"
               value={profileData.contactNumber}
               onChange={handleInputChange}
-              className="form-control"
+              className={`form-control ${errors.contactNumber ? 'is-invalid' : ''}`}
             />
+            {errors.contactNumber && <div className="invalid-feedback">{errors.contactNumber}</div>}
           </div>
 
           <div className="fieldContainer">
@@ -135,8 +168,9 @@ const AddProfile = () => {
               name="bankAccountNumber"
               value={profileData.bankAccountNumber}
               onChange={handleInputChange}
-              className="form-control"
+              className={`form-control ${errors.bankAccountNumber ? 'is-invalid' : ''}`}
             />
+            {errors.bankAccountNumber && <div className="invalid-feedback">{errors.bankAccountNumber}</div>}
           </div>
 
           <div className="buttonContainer">

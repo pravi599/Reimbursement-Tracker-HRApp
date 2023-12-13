@@ -178,21 +178,21 @@ const Requests = () => {
         </div>
       )}
 
-{selectedRequest && updateTrackingDetails && (
-  <div className="modal">
-    <div className="modal-content">
-      <UpdateTracking
-        requestId={selectedRequest.requestId}
-        trackingDetails={updateTrackingDetails}
-        onUpdateTracking={() => {
-          handleCloseUpdateTrackingModal();
-        }}
-        onClose={handleCloseUpdateTrackingModal}
-        username={selectedRequest.username}
-      />
-    </div>
-  </div>
-)}
+      {selectedRequest && updateTrackingDetails && (
+        <div className="modal">
+          <div className="modal-content">
+            <UpdateTracking
+              requestId={selectedRequest.requestId}
+              trackingDetails={updateTrackingDetails}
+              onUpdateTracking={() => {
+                handleCloseUpdateTrackingModal();
+              }}
+              onClose={handleCloseUpdateTrackingModal}
+              username={selectedRequest.username}
+            />
+          </div>
+        </div>
+      )}
 
 
       {documentModal.isOpen && (
