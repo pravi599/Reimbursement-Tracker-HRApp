@@ -1,0 +1,52 @@
+/* Common styles for all screens */
+body{
+    height: 100Vh;
+}
+.userProfileContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.userProfileBox {
+    max-width: 400px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.userProfileHeader {
+    text-align: center;
+}
+
+.form-group {
+    text-align: center;
+}
+
+.alert {
+    margin-top: 10px;
+}
+.button {
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 8px;
+    width: auto; /* Allow the button to take its natural width */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .button {
+        width: 100%; /* Make the button full width on smaller screens */
+        margin-top: 10px;
+    }
+}
+
+/* Additional responsive styles for even smaller screens */
+@media (max-width: 400px) {
+    .button {
+        font-size: 14px;
+    }
+}

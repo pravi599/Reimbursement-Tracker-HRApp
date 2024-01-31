@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\39d33c8b-0c91-4762-9632-9e96e4e52248_Health Invoice.jpg",
+      "PackagePath": "staticwebassets\\Documents\\39d33c8b-0c91-4762-9632-9e96e4e52248_Health Invoice.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\3a885d87-7068-4f1b-9617-a399cdee29b8_TRAVEL-AGENCY-1-564x804.jpg",
+      "PackagePath": "staticwebassets\\Documents\\3a885d87-7068-4f1b-9617-a399cdee29b8_TRAVEL-AGENCY-1-564x804.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\4b631bb5-73da-4a10-bd20-1a41c77a2f34_TRAVEL-AGENCY-1-564x804.jpg",
+      "PackagePath": "staticwebassets\\Documents\\4b631bb5-73da-4a10-bd20-1a41c77a2f34_TRAVEL-AGENCY-1-564x804.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\7b3c0323-b949-44bb-9f2d-ade5e705eab3_Health Invoice.jpg",
+      "PackagePath": "staticwebassets\\Documents\\7b3c0323-b949-44bb-9f2d-ade5e705eab3_Health Invoice.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\9bac1378-d88a-47c2-bbe2-fcc9ff359cc0_Screenshot (573).png",
+      "PackagePath": "staticwebassets\\Documents\\9bac1378-d88a-47c2-bbe2-fcc9ff359cc0_Screenshot (573).png"
+    },
+    {
+      "Id": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\b032a94b-59a3-477d-8819-5221e8123672_Meals Invoice.jpg",
+      "PackagePath": "staticwebassets\\Documents\\b032a94b-59a3-477d-8819-5221e8123672_Meals Invoice.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\e09288f7-4b1a-496e-8f4d-e263cf0cd089_text document.txt",
+      "PackagePath": "staticwebassets\\Documents\\e09288f7-4b1a-496e-8f4d-e263cf0cd089_text document.txt"
+    },
+    {
+      "Id": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\e7bb2d26-d238-4c98-975b-ad92076d6056_food-bill.jpg",
+      "PackagePath": "staticwebassets\\Documents\\e7bb2d26-d238-4c98-975b-ad92076d6056_food-bill.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\f4c85602-a286-4832-ab3d-0d3ff03fc066_Screenshot (604).png",
+      "PackagePath": "staticwebassets\\Documents\\f4c85602-a286-4832-ab3d-0d3ff03fc066_Screenshot (604).png"
+    },
+    {
+      "Id": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\fa55794d-5bcc-47c7-93e0-6a9e44274519_IMG_20231106_144230.jpg",
+      "PackagePath": "staticwebassets\\Documents\\fa55794d-5bcc-47c7-93e0-6a9e44274519_IMG_20231106_144230.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\fe7833c3-8108-41dc-8365-51ffd1818f81_Training Invoice.png",
+      "PackagePath": "staticwebassets\\Documents\\fe7833c3-8108-41dc-8365-51ffd1818f81_Training Invoice.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ReimbursementTrackerApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ReimbursementTrackerApp.props",
+      "PackagePath": "build\\ReimbursementTrackerApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ReimbursementTrackerApp.props",
+      "PackagePath": "buildMultiTargeting\\ReimbursementTrackerApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ReimbursementTrackerApp.props",
+      "PackagePath": "buildTransitive\\ReimbursementTrackerApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

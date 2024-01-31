@@ -1,0 +1,180 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\39d33c8b-0c91-4762-9632-9e96e4e52248_Health Invoice.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ReimbursementTrackerApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ReimbursementTrackerApp</BasePath>
+      <RelativePath>Documents/39d33c8b-0c91-4762-9632-9e96e4e52248_Health Invoice.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\39d33c8b-0c91-4762-9632-9e96e4e52248_Health Invoice.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\3a885d87-7068-4f1b-9617-a399cdee29b8_TRAVEL-AGENCY-1-564x804.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ReimbursementTrackerApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ReimbursementTrackerApp</BasePath>
+      <RelativePath>Documents/3a885d87-7068-4f1b-9617-a399cdee29b8_TRAVEL-AGENCY-1-564x804.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\3a885d87-7068-4f1b-9617-a399cdee29b8_TRAVEL-AGENCY-1-564x804.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\4b631bb5-73da-4a10-bd20-1a41c77a2f34_TRAVEL-AGENCY-1-564x804.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ReimbursementTrackerApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ReimbursementTrackerApp</BasePath>
+      <RelativePath>Documents/4b631bb5-73da-4a10-bd20-1a41c77a2f34_TRAVEL-AGENCY-1-564x804.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\4b631bb5-73da-4a10-bd20-1a41c77a2f34_TRAVEL-AGENCY-1-564x804.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\7b3c0323-b949-44bb-9f2d-ade5e705eab3_Health Invoice.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ReimbursementTrackerApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ReimbursementTrackerApp</BasePath>
+      <RelativePath>Documents/7b3c0323-b949-44bb-9f2d-ade5e705eab3_Health Invoice.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\7b3c0323-b949-44bb-9f2d-ade5e705eab3_Health Invoice.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\9bac1378-d88a-47c2-bbe2-fcc9ff359cc0_Screenshot (573).png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ReimbursementTrackerApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ReimbursementTrackerApp</BasePath>
+      <RelativePath>Documents/9bac1378-d88a-47c2-bbe2-fcc9ff359cc0_Screenshot (573).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\9bac1378-d88a-47c2-bbe2-fcc9ff359cc0_Screenshot (573).png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\b032a94b-59a3-477d-8819-5221e8123672_Meals Invoice.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ReimbursementTrackerApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ReimbursementTrackerApp</BasePath>
+      <RelativePath>Documents/b032a94b-59a3-477d-8819-5221e8123672_Meals Invoice.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\b032a94b-59a3-477d-8819-5221e8123672_Meals Invoice.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\e09288f7-4b1a-496e-8f4d-e263cf0cd089_text document.txt))">
+      <SourceType>Package</SourceType>
+      <SourceId>ReimbursementTrackerApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ReimbursementTrackerApp</BasePath>
+      <RelativePath>Documents/e09288f7-4b1a-496e-8f4d-e263cf0cd089_text document.txt</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\e09288f7-4b1a-496e-8f4d-e263cf0cd089_text document.txt))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\e7bb2d26-d238-4c98-975b-ad92076d6056_food-bill.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ReimbursementTrackerApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ReimbursementTrackerApp</BasePath>
+      <RelativePath>Documents/e7bb2d26-d238-4c98-975b-ad92076d6056_food-bill.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\e7bb2d26-d238-4c98-975b-ad92076d6056_food-bill.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\f4c85602-a286-4832-ab3d-0d3ff03fc066_Screenshot (604).png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ReimbursementTrackerApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ReimbursementTrackerApp</BasePath>
+      <RelativePath>Documents/f4c85602-a286-4832-ab3d-0d3ff03fc066_Screenshot (604).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\f4c85602-a286-4832-ab3d-0d3ff03fc066_Screenshot (604).png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\fa55794d-5bcc-47c7-93e0-6a9e44274519_IMG_20231106_144230.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ReimbursementTrackerApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ReimbursementTrackerApp</BasePath>
+      <RelativePath>Documents/fa55794d-5bcc-47c7-93e0-6a9e44274519_IMG_20231106_144230.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\fa55794d-5bcc-47c7-93e0-6a9e44274519_IMG_20231106_144230.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\fe7833c3-8108-41dc-8365-51ffd1818f81_Training Invoice.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ReimbursementTrackerApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ReimbursementTrackerApp</BasePath>
+      <RelativePath>Documents/fe7833c3-8108-41dc-8365-51ffd1818f81_Training Invoice.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\fe7833c3-8108-41dc-8365-51ffd1818f81_Training Invoice.png))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>
