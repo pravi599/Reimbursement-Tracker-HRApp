@@ -4,9 +4,8 @@
     {
         public int RequestId { get; set; }
         public int PaymentId { get; set; }
-        public string CardNumber { get; set; }
-        public string ExpiryDate { get; set; }
-        public string CVV { get; set; }
+        public string BankAccountNumber { get; set; }
+        public string IFSC { get; set; }
         public float PaymentAmount { get; set; }
         public DateTime PaymentDate { get; set; }
 

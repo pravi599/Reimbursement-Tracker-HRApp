@@ -30,15 +30,11 @@ namespace ReimbursementTrackerApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PaymentId"), 1L, 1);
 
-                    b.Property<string>("CVV")
+                    b.Property<string>("BankAccountNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CardNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ExpiryDate")
+                    b.Property<string>("IFSC")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import './AddPayments.css';
@@ -7,9 +8,9 @@ const AddPayment = () => {
   const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}T${currentDate.getHours().toString().padStart(2, '0')}:${currentDate.getMinutes().toString().padStart(2, '0')}`;
   const [paymentData, setPaymentData] = useState({
     RequestId: '',
-    CardNumber: '',
-    ExpiryDate: '',
-    CVV: '',
+    BankAccountNumber: '',
+    
+    IFSC: '',
     PaymentAmount: 0,
     PaymentDate: formattedDate,
   //  PaymentDate: new Date().toISOString().slice(0, 16),
@@ -28,19 +29,17 @@ const AddPayment = () => {
     const newErrors = {};
  
     if (!paymentData.RequestId.trim()) {
-      newErrors.Username = 'Please enter a valid Username.';
+      newErrors.RequestId = 'Please enter a valid RequestId.';
     }
  
-    if (!paymentData.CardNumber.trim()) {
-      newErrors.CardNumber = 'Please enter a valid Card Number.';
+    if (!paymentData.BankAccountNumber.trim()) {
+      newErrors.BankAccountNumber = 'Please enter a BankAccountNumber Number.';
     }
  
-    if (!paymentData.ExpiryDate.trim()) {
-      newErrors.ExpiryDate = 'Please enter a valid Expiry Date.';
-    }
+    
  
-    if (!paymentData.CVV.trim()) {
-      newErrors.CVV = 'Please enter a valid CVV.';
+    if (!paymentData.IFSC.trim()) {
+      newErrors.IFSC = 'Please enter a valid IFSC.';
     }
  
     if (!paymentData.PaymentAmount || paymentData.PaymentAmount <= 0) {
@@ -84,51 +83,41 @@ const AddPayment = () => {
       <div className='form-wrapper'>
         <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="Username">Username:</label>
+            <label htmlFor="RequestId">RequestId:</label>
             <input
               type="text"
-              id="Username"
-              name="Username"
-              value={paymentData.Username}
+              id="RequestId"
+              name="RequestId"
+              value={paymentData.RequestId}
               onChange={handleInputChange}
             />
-            {errors.Username && <div className="error">{errors.Username}</div>}
+            {errors.RequestId && <div className="error">{errors.RequestId}</div>}
           </div>
  
           <div>
-            <label htmlFor="CardNumber">Card Number:</label>
+            <label htmlFor="BankAccountNumber">BankAccount Number:</label>
             <input
               type="text"
-              id="CardNumber"
-              name="CardNumber"
-              value={paymentData.CardNumber}
+              id="BankAccountNumber"
+              name="BankAccountNumber"
+              value={paymentData.BankAccountNumber}
               onChange={handleInputChange}
             />
-            {errors.CardNumber && <div className="error">{errors.CardNumber}</div>}
+            {errors.BankAccountNumber && <div className="error">{errors.BankAccountNumber}</div>}
           </div>
  
-          <div>
-            <label htmlFor="ExpiryDate">Expiry Date:</label>
-            <input
-              type="text"
-              id="ExpiryDate"
-              name="ExpiryDate"
-              value={paymentData.ExpiryDate}
-              onChange={handleInputChange}
-            />
-            {errors.ExpiryDate && <div className="error">{errors.ExpiryDate}</div>}
-          </div>
+         
  
           <div>
-            <label htmlFor="CVV">CVV:</label>
+            <label htmlFor="IFSC">IFSC:</label>
             <input
               type="text"
-              id="CVV"
-              name="CVV"
-              value={paymentData.CVV}
+              id="IFSC"
+              name="IFSC"
+              value={paymentData.IFSC}
               onChange={handleInputChange}
             />
-            {errors.CVV && <div className="error">{errors.CVV}</div>}
+            {errors.IFSC && <div className="error">{errors.IFSC}</div>}
           </div>
  
           <div>

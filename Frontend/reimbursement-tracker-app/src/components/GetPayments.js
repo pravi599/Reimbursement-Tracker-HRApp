@@ -50,9 +50,8 @@ const GetPayments = () => {
           <tr>
             <th>Payment ID</th>
             <th>Request ID</th>
-            <th>Card Number</th>
-            <th>Expiry Date</th>
-            <th>CVV</th>
+            <th>BankAccount Number</th>
+            <th>IFSC</th>
             <th>Payment Amount</th>
             <th>Payment Date</th>
           </tr>
@@ -62,9 +61,8 @@ const GetPayments = () => {
             <tr key={payment.paymentId}>
               <td>{payment.paymentId}</td>
               <td>{payment.requestId}</td>
-              <td>{payment.cardNumber}</td>
-              <td>{payment.expiryDate}</td>
-              <td>{payment.cvv}</td>
+              <td>{payment.bankAccountNumber}</td>             
+              <td>{payment.ifsc}</td>
               <td>{payment.paymentAmount}</td>
               <td>{payment.paymentDate}</td>
             </tr>

@@ -37,9 +37,9 @@ namespace ReimbursementTrackerApp.Tests
             {
                 RequestId = 1,
                 PaymentId = 1,
-                CardNumber = "1234567812345678",
-                ExpiryDate = "12/25",
-                CVV = "123",
+                BankAccountNumber = "1234567812345678",
+
+                IFSC = "1233",
                 PaymentAmount = 100.00f,
                 PaymentDate = DateTime.Now
             };
@@ -59,9 +59,9 @@ namespace ReimbursementTrackerApp.Tests
             {
                 RequestId = 1,
                 PaymentId = 1,
-                CardNumber = "1234567812345678",
-                ExpiryDate = "12/25",
-                CVV = "123",
+                BankAccountNumber = "1234567812345678",
+
+                IFSC = "1233",
                 PaymentAmount = 100.00f,
                 PaymentDate = DateTime.Now
             };
@@ -81,9 +81,9 @@ namespace ReimbursementTrackerApp.Tests
             {
                 RequestId = 1,
                 PaymentId = 1,
-                CardNumber = "1234567812345678",
-                ExpiryDate = "12/25",
-                CVV = "123",
+                BankAccountNumber = "1234567812345678",
+
+                IFSC = "1232",
                 PaymentAmount = 100.00f,
                 PaymentDate = DateTime.Now
             };
@@ -113,9 +113,9 @@ namespace ReimbursementTrackerApp.Tests
             {
                 RequestId = 1,
                 PaymentId = 1,
-                CardNumber = "1234567812345678",
-                ExpiryDate = "12/25",
-                CVV = "123",
+                BankAccountNumber = "1234567812345678",
+
+                IFSC = "1233",
                 PaymentAmount = 100.00f,
                 PaymentDate = DateTime.Now
             };
@@ -124,9 +124,9 @@ namespace ReimbursementTrackerApp.Tests
             {
                 RequestId = 1,
                 PaymentId = 1,
-                CardNumber = "5678123456781234",
-                ExpiryDate = "01/26",
-                CVV = "456",
+                BankAccountNumber = "5678123456781234",
+
+                IFSC = "4565",
                 PaymentAmount = 150.00f,
                 PaymentDate = DateTime.Now.AddDays(1)
             };
@@ -139,7 +139,7 @@ namespace ReimbursementTrackerApp.Tests
 
             // Assert
             Assert.AreEqual(150.00f, updatedPaymentDetails.PaymentAmount);
-            Assert.AreEqual("5678123456781234", updatedPaymentDetails.CardNumber);
+            Assert.AreEqual("5678123456781234", updatedPaymentDetails.BankAccountNumber);
         }
 
         [Test]
@@ -150,9 +150,9 @@ namespace ReimbursementTrackerApp.Tests
             {
                 RequestId = 1,
                 PaymentId = 1,
-                CardNumber = "1234567812345678",
-                ExpiryDate = "12/25",
-                CVV = "123",
+                BankAccountNumber = "1234567812345678",
+
+                IFSC = "1233",
                 PaymentAmount = 100.00f,
                 PaymentDate = DateTime.Now
             };
@@ -169,9 +169,9 @@ namespace ReimbursementTrackerApp.Tests
             {
                 RequestId = 1,
                 PaymentId = 1,
-                CardNumber = "1234567812345678",
-                ExpiryDate = "12/25",
-                CVV = "123",
+                BankAccountNumber = "1234567812345678",
+
+                IFSC = "1234",
                 PaymentAmount = 100.00f,
                 PaymentDate = DateTime.Now
             };
@@ -184,7 +184,7 @@ namespace ReimbursementTrackerApp.Tests
 
             // Assert
             Assert.IsNotNull(retrievedPaymentDetails, "Failed to retrieve payment details.");
-            Assert.AreEqual("1234567812345678", retrievedPaymentDetails.CardNumber);
+            Assert.AreEqual("1234567812345678", retrievedPaymentDetails.BankAccountNumber);
         }
 
 
@@ -204,9 +204,9 @@ namespace ReimbursementTrackerApp.Tests
             {
                 RequestId = 1,
                 PaymentId = 1,
-                CardNumber = "1234567812345678",
-                ExpiryDate = "12/25",
-                CVV = "123",
+                BankAccountNumber = "1234567812345678",
+
+                IFSC = "1234",
                 PaymentAmount = 100.00f,
                 PaymentDate = DateTime.Now
             };
@@ -215,9 +215,9 @@ namespace ReimbursementTrackerApp.Tests
             {
                 RequestId = 2,
                 PaymentId = 2,
-                CardNumber = "5678123456781234",
-                ExpiryDate = "01/26",
-                CVV = "456",
+                BankAccountNumber = "5678123456781234",
+
+                IFSC = "456",
                 PaymentAmount = 150.00f,
                 PaymentDate = DateTime.Now.AddDays(1)
             };

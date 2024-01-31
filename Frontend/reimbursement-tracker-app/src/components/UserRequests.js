@@ -144,11 +144,11 @@ const UserRequests = () => {
             <p>Description: {request.description}</p>
             <p>Request Date: {new Date(request.requestDate).toLocaleString()}</p>
             <div className="actions">
-              <button onClick={() => handleDeleteRequest(request.requestId)} className="btn btn-danger">Delete</button>
-              <button onClick={() => handleUpdateRequest(request)} className="btn btn-primary">Update</button>
+              <button onClick={() => handleDeleteRequest(request.requestId)} className="btn btn-danger btnreq">Delete</button>
+              <button onClick={() => handleUpdateRequest(request)} className="btn btn-primary btnreq">Update</button>
               <button onClick={() => { setSelectedRequest(request);
               handleViewTrackingClick(request.requestId);}}
-              className="btn btn-primary"
+              className="btn btn-primary btnreq"
                 >
                   View Tracking
                 </button>

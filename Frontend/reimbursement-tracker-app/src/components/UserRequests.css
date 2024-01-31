@@ -11,7 +11,7 @@
   border: 2px solid #ccc;
   padding: 16px;
   margin:8px;
-  width: 300px;
+  width: 450px;
 }
 
 .actions {
@@ -26,8 +26,6 @@
   border: none;
   border-radius: 10px;
   font-size: 14px;
-  margin-right: 40px;
-  margin-left: 40px;
 }
 
 .btn-danger {
@@ -38,7 +36,9 @@
 .btn-primary {
   background-color: #007bff;
 }
-
+.btnreq {
+  width: 200px;
+}
 .Button{
   background-color: #007bff;
   color: white;

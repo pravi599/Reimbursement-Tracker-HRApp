@@ -42,9 +42,9 @@ namespace ReimbursementTrackerApp.Services
                     RequestId = paymentDetailsDTO.RequestId,
                     PaymentAmount = paymentDetailsDTO.PaymentAmount,
                     PaymentDate = paymentDetailsDTO.PaymentDate,
-                    CardNumber = paymentDetailsDTO.CardNumber,
-                    ExpiryDate = paymentDetailsDTO.ExpiryDate,
-                    CVV = paymentDetailsDTO.CVV
+                    BankAccountNumber = paymentDetailsDTO.BankAccountNumber,
+                    IFSC = paymentDetailsDTO.IFSC,
+
                 };
 
                 _paymentDetailsRepository.Add(paymentDetails);
@@ -86,9 +86,9 @@ namespace ReimbursementTrackerApp.Services
                 existingPaymentDetails.RequestId = paymentDetailsDTO.RequestId;
                 existingPaymentDetails.PaymentAmount = paymentDetailsDTO.PaymentAmount;
                 existingPaymentDetails.PaymentDate = paymentDetailsDTO.PaymentDate;
-                existingPaymentDetails.CardNumber = paymentDetailsDTO.CardNumber;
-                existingPaymentDetails.ExpiryDate = paymentDetailsDTO.ExpiryDate;
-                existingPaymentDetails.CVV = paymentDetailsDTO.CVV;
+                existingPaymentDetails.BankAccountNumber = paymentDetailsDTO.BankAccountNumber;
+                existingPaymentDetails.IFSC = paymentDetailsDTO.IFSC;
+
 
                 _paymentDetailsRepository.Update(existingPaymentDetails);
 
@@ -97,9 +97,9 @@ namespace ReimbursementTrackerApp.Services
                     PaymentId = existingPaymentDetails.PaymentId,
                     RequestId = existingPaymentDetails.RequestId,
                     PaymentAmount = existingPaymentDetails.PaymentAmount,
-                    CardNumber = existingPaymentDetails.CardNumber,
-                    ExpiryDate = existingPaymentDetails.ExpiryDate,
-                    CVV = existingPaymentDetails.CVV,
+                    BankAccountNumber = existingPaymentDetails.BankAccountNumber,
+                    IFSC = existingPaymentDetails.IFSC,
+
                     PaymentDate = existingPaymentDetails.PaymentDate
                 };
             }
@@ -123,9 +123,9 @@ namespace ReimbursementTrackerApp.Services
                     PaymentId = paymentDetails.PaymentId,
                     RequestId = paymentDetails.RequestId,
                     PaymentAmount = paymentDetails.PaymentAmount,
-                    CardNumber = paymentDetails.CardNumber,
-                    ExpiryDate = paymentDetails.ExpiryDate,
-                    CVV = paymentDetails.CVV,
+                    BankAccountNumber = paymentDetails.BankAccountNumber,
+                    IFSC = paymentDetails.IFSC,
+
                     PaymentDate = paymentDetails.PaymentDate
                 };
             }
@@ -146,25 +146,25 @@ namespace ReimbursementTrackerApp.Services
                 PaymentId = pd.PaymentId,
                 RequestId = pd.RequestId,
                 PaymentAmount = pd.PaymentAmount,
-                CardNumber = MaskCreditCard(pd.CardNumber), // Mask the credit card number
-                ExpiryDate = pd.ExpiryDate,
-                CVV = MaskCVV(pd.CVV), // Mask the CVV
+                BankAccountNumber = MaskBankAccountNumber(pd.BankAccountNumber), // Mask the credit card number
+                IFSC = pd.IFSC,
+
                 PaymentDate = pd.PaymentDate
             });
         }
-        private string MaskCreditCard(string creditCardNumber)
+        private string MaskBankAccountNumber(string BankAccountNumber)
         {
             // Implement your masking logic here (show only the last 4 digits, for example)
             // This is a simplified example, you might want to use a more secure masking method
-            return "**** **** **** " + creditCardNumber.Substring(creditCardNumber.Length - 4);
+            return "**** **** **** " + BankAccountNumber.Substring(BankAccountNumber.Length - 4);
         }
 
         // Helper method to mask the CVV
-        private string MaskCVV(string cvv)
+        private string MaskIFSC(string IFSC)
         {
             // Implement your masking logic for CVV (show only a portion)
             // This is a simplified example, you might want to use a more secure masking method
-            return "***";
+            return "****";
         }
     }
 }
