@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import UpdateTracking from './UpdateTracking';
+import AddPayments from './AddPayments';
 import './Requests.css';
 
 const ViewTracking = ({ trackingDetails, onClose }) => {
@@ -19,7 +20,6 @@ const ViewTracking = ({ trackingDetails, onClose }) => {
         Tracking Status:
         <input type="text" name="trackingStatus" value={trackingDetails.trackingStatus} readOnly />
       </label>
-
       <label>
         Approval Date:
         <input name="approvalDate" value={trackingDetails.approvalDate || ''} readOnly />
@@ -43,6 +43,7 @@ const Requests = () => {
   const [documentModal, setDocumentModal] = useState({ isOpen: false, documentUrl: '' });
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredRequests, setFilteredRequests] = useState([]);
+  const [selectedPaymentRequest, setSelectedPaymentRequest] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -107,6 +108,14 @@ const Requests = () => {
     setFilteredRequests(filteredRequests);
   };
 
+  const handleMakePaymentClick = (request) => {
+    setSelectedPaymentRequest(request);
+  };
+
+  const resetSelectedPaymentRequest = () => {
+    setSelectedPaymentRequest(null);
+  };
+
   return (
     <div>
       <h2>Requests</h2>
@@ -142,7 +151,14 @@ const Requests = () => {
               <td>{request.username}</td>
               <td>{request.expenseCategory}</td>
               <td>{request.amount}</td>
-              <td><button onClick={() => handleViewDocument(request.document)} className="Button">View Document</button></td>
+              <td>
+                <button
+                  onClick={() => handleViewDocument(request.document)}
+                  className="Button"
+                >
+                  View Document
+                </button>
+              </td>
               <td>{request.description}</td>
               <td>{new Date(request.requestDate).toLocaleString()}</td>
               <td>
@@ -163,6 +179,12 @@ const Requests = () => {
                   className="Button-warning"
                 >
                   Update Tracking
+                </button>
+                <button
+                  onClick={() => handleMakePaymentClick(request)}
+                  className="Button-success"
+                >
+                  Make Payment
                 </button>
               </td>
             </tr>
@@ -194,7 +216,6 @@ const Requests = () => {
         </div>
       )}
 
-
       {documentModal.isOpen && (
         <div className="document-modal">
           <div className="document-content">
@@ -202,6 +223,17 @@ const Requests = () => {
               <span>&times;</span>
             </button>
             <iframe src={documentModal.documentUrl} title="Document Viewer" width="100%" height="100%" />
+          </div>
+        </div>
+      )}
+
+      {selectedPaymentRequest && (
+        <div className="modal">
+          <div className="modal-content">
+            <AddPayments
+              request={selectedPaymentRequest}
+              onClose={resetSelectedPaymentRequest}
+            />
           </div>
         </div>
       )}

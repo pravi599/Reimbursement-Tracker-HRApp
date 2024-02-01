@@ -26,6 +26,20 @@ const Login = () => {
 
         if (!username) newErrors.username = "Username cannot be empty";
         if (!password) newErrors.password = "Password cannot be empty";
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!username) {
+            newErrors.username = "Email cannot be empty";
+        } else if (!emailRegex.test(username)) {
+            newErrors.username = "Please enter a valid email address";
+        }
+
+        // Password validation
+        if (!password) {
+            newErrors.password = "Password cannot be empty";
+        } else if (password.length < 6) {
+            newErrors.password = "Password must be at least 6 characters long";
+        }
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -50,8 +64,8 @@ const Login = () => {
                 // Store the token in local storage
                 localStorage.setItem("token", token);
                 localStorage.setItem("username", username);
-                localStorage.setItem("role",role);
-                setLoginResult({ success: true});
+                localStorage.setItem("role", role);
+                setLoginResult({ success: true });
                 alert("Login Successful!");
 
                 // // Force a page reload upon successful login
@@ -108,10 +122,10 @@ const Login = () => {
                         </button>
                         <button className="button button-primary">Reset</button>
                     </div>
-                    
+
                     <div className="signup-link">
                         <p>
-                            Don't have an account? 
+                            Don't have an account?
                             <Link to="/signup"> Sign up here</Link>.
                         </p>
                     </div>

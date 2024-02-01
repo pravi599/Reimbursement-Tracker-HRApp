@@ -26,9 +26,21 @@ const Register = () => {
     const checkUserData = () => {
         const { username, password, confirmPassword, role } = formData;
         const newErrors = {};
-
-        if (!username) newErrors.username = "Username cannot be empty";
-        if (!password) newErrors.password = "Password cannot be empty";
+     
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!username) {
+          newErrors.username = "Email cannot be empty";
+        } else if (!emailRegex.test(username)) {
+          newErrors.username = "Please enter a valid email address";
+        }
+     
+        // Password validation
+        if (!password) {
+          newErrors.password = "Password cannot be empty";
+        } else if (password.length < 6) {
+          newErrors.password = "Password must be at least 6 characters long";
+        }
         if (!confirmPassword) newErrors.confirmPassword = "Confirm Password cannot be empty";
         if (password !== confirmPassword) {
             newErrors.password = "Passwords do not match";
@@ -38,9 +50,9 @@ const Register = () => {
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
-    };
-
-    const signUp = async (event) => {
+      };
+    
+const signUp = async (event) => {
         event.preventDefault();
 
         if (!checkUserData()) return;

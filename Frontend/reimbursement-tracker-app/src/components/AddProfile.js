@@ -37,10 +37,14 @@ const AddProfile = () => {
 
     if (!profileData.contactNumber.trim()) {
       errors.contactNumber = 'Please enter your contact number.';
+    } else if (!/^\d{10}$/.test(profileData.contactNumber.trim())) {
+      errors.contactNumber = 'Contact Number must be 10 digits.';
     }
-
+ 
     if (!profileData.bankAccountNumber.trim()) {
       errors.bankAccountNumber = 'Please enter your bank account number.';
+    } else if (!/^\d{15}$/.test(profileData.bankAccountNumber.trim())) {
+      errors.bankAccountNumber = 'Bank Account Number must be 15 digits.';
     }
 
     setErrors(errors);
