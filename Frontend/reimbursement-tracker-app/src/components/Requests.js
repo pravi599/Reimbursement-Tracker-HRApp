@@ -1,9 +1,10 @@
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import UpdateTracking from './UpdateTracking';
 import AddPayments from './AddPayments';
 import './Requests.css';
-
+ 
 const ViewTracking = ({ trackingDetails, onClose }) => {
   return (
     <div>
@@ -34,7 +35,7 @@ const ViewTracking = ({ trackingDetails, onClose }) => {
     </div>
   );
 };
-
+ 
 const Requests = () => {
   const [requests, setRequests] = useState([]);
   const [selectedRequest, setSelectedRequest] = useState(null);
@@ -44,7 +45,7 @@ const Requests = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredRequests, setFilteredRequests] = useState([]);
   const [selectedPaymentRequest, setSelectedPaymentRequest] = useState(null);
-
+ 
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -55,10 +56,10 @@ const Requests = () => {
         console.error('Error fetching requests:', error);
       }
     };
-
+ 
     fetchData();
   }, []);
-
+ 
   const handleViewTrackingClick = async (requestId) => {
     try {
       const response = await axios.get(`https://localhost:7007/api/Tracking/request/${requestId}`);
@@ -67,7 +68,7 @@ const Requests = () => {
       console.error('Error fetching tracking details:', error);
     }
   };
-
+ 
   const handleUpdateTrackingClick = async (requestId) => {
     try {
       const response = await axios.get(`https://localhost:7007/api/Tracking/request/${requestId}`);
@@ -76,46 +77,49 @@ const Requests = () => {
       console.error('Error fetching tracking details:', error);
     }
   };
-
+ 
   const handleCloseViewTrackingModal = () => {
     setViewTrackingDetails(null);
   };
-
+ 
   const handleCloseUpdateTrackingModal = () => {
     setUpdateTrackingDetails(null);
   };
-
+ 
   const handleViewDocument = (documentUrl) => {
     setDocumentModal({ isOpen: true, documentUrl });
   };
-
+ 
   const handleCloseDocumentModal = () => {
     setDocumentModal({ isOpen: false, documentUrl: '' });
   };
-
+ 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value.toLowerCase());
   };
-
+ 
   const handleSearchButtonClick = () => {
     const query = searchQuery.trim().toLowerCase();
-
+ 
     const filteredRequests = requests.filter((request) =>
       request.expenseCategory.toLowerCase().includes(query) ||
       request.username.toLowerCase().includes(query)
     );
-
+ 
     setFilteredRequests(filteredRequests);
   };
-
+ 
   const handleMakePaymentClick = (request) => {
     setSelectedPaymentRequest(request);
   };
 
+ 
+  
+ 
   const resetSelectedPaymentRequest = () => {
     setSelectedPaymentRequest(null);
   };
-
+ 
   return (
     <div>
       <h2>Requests</h2>
@@ -191,7 +195,7 @@ const Requests = () => {
           ))}
         </tbody>
       </table>
-
+ 
       {selectedRequest && viewTrackingDetails && (
         <div className="modal">
           <div className="modal-content">
@@ -199,7 +203,7 @@ const Requests = () => {
           </div>
         </div>
       )}
-
+ 
       {selectedRequest && updateTrackingDetails && (
         <div className="modal">
           <div className="modal-content">
@@ -215,7 +219,7 @@ const Requests = () => {
           </div>
         </div>
       )}
-
+ 
       {documentModal.isOpen && (
         <div className="document-modal">
           <div className="document-content">
@@ -226,19 +230,23 @@ const Requests = () => {
           </div>
         </div>
       )}
-
+ 
       {selectedPaymentRequest && (
         <div className="modal">
           <div className="modal-content">
-            <AddPayments
+          <AddPayments
               request={selectedPaymentRequest}
+              amount={selectedPaymentRequest.amount}
+              requestId={selectedPaymentRequest.requestId}
               onClose={resetSelectedPaymentRequest}
             />
+          
           </div>
         </div>
       )}
     </div>
   );
 };
-
+ 
 export default Requests;
+ 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hpr1UmHgRf00M5SHWhs8bFHwe5EXjNSKEYoSpe3HVgg=",
+  "Hash": "SrCaFEUZglqNzsb+L4PWedBZxpa+5TrzcvyLyQ0ayL0=",
   "Source": "ReimbursementTrackerApp",
   "BasePath": "_content/ReimbursementTrackerApp",
   "Mode": "Default",
@@ -117,6 +117,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Documents\\b032a94b-59a3-477d-8819-5221e8123672_Meals Invoice.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\cb21db62-be87-4056-a23f-9f2ecf7c2a43_Training Invoice.png",
+      "SourceId": "ReimbursementTrackerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\",
+      "BasePath": "_content/ReimbursementTrackerApp",
+      "RelativePath": "Documents/cb21db62-be87-4056-a23f-9f2ecf7c2a43_Training Invoice.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\cb21db62-be87-4056-a23f-9f2ecf7c2a43_Training Invoice.png"
+    },
+    {
+      "Identity": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\d8599660-8d57-4b80-940a-c9a510344295_Meals Invoice.jpg",
+      "SourceId": "ReimbursementTrackerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\",
+      "BasePath": "_content/ReimbursementTrackerApp",
+      "RelativePath": "Documents/d8599660-8d57-4b80-940a-c9a510344295_Meals Invoice.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\d8599660-8d57-4b80-940a-c9a510344295_Meals Invoice.jpg"
     },
     {
       "Identity": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\wwwroot\\Documents\\e09288f7-4b1a-496e-8f4d-e263cf0cd089_text document.txt",

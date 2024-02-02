@@ -163,7 +163,7 @@ namespace ReimbursementTrackerApp.Controllers
         /// </summary>
         /// <param name="username">The username of the user profile to retrieve.</param>
         /// <returns>The user profile with the given username.</returns>
-        [Authorize(Roles = "Employee")]
+        [Authorize(Roles = "Employee,HR")]
         [HttpGet("username/{username}")]
         public IActionResult GetUserProfileByUsername(string username)
         {
