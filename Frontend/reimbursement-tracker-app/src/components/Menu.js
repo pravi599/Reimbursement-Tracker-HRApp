@@ -10,7 +10,6 @@ const Menu = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [isProfileDropdownOpen, setProfileDropdownOpen] = useState(false);
-  const [isPaymentDropdownOpen, setPaymentDropdownOpen] = useState(false);
   const [isRequestDropdownOpen, setRequestDropdownOpen] = useState(false);
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -31,20 +30,13 @@ const Menu = () => {
 
   const toggleProfileDropdown = () => {
     setProfileDropdownOpen(!isProfileDropdownOpen);
-    setPaymentDropdownOpen(false);
     setRequestDropdownOpen(false);
   };
 
-  const togglePaymentDropdown = () => {
-    setPaymentDropdownOpen(!isPaymentDropdownOpen);
-    setProfileDropdownOpen(false);
-    setRequestDropdownOpen(false);
-  };
 
   const toggleRequestDropdown = () => {
     setRequestDropdownOpen(!isRequestDropdownOpen);
     setProfileDropdownOpen(false);
-    setPaymentDropdownOpen(false);
   };
 
   const toggleMenu = () => {
@@ -141,30 +133,7 @@ const Menu = () => {
                       >
                         <FaMoneyBillAlt /> View Payments
                       </NavLink>
-                      
-                     
-
-                      <div className="payment-dropdown">
-                        <div className={`nav-link ${isPaymentDropdownOpen ? 'active-link' : ''}`} onClick={togglePaymentDropdown}>
-                          <FaMoneyBillAlt /> Payments
-                        </div>
-                        {isPaymentDropdownOpen && (
-                          <div className="dropdown-content">
-                            <NavLink
-                              to="/AddPayment"
-                              className={`nav-link ${location.pathname === '/AddPayment' ? 'active-link' : ''}`}
-                            >
-                              <FaDollarSign /> Make Payment
-                            </NavLink>
-                            <NavLink
-                              to="/GetPayments"
-                              className={`nav-link ${location.pathname === '/GetPayments' ? 'active-link' : ''}`}
-                            >
-                              <FaRegFileAlt /> View Payments
-                            </NavLink>
-                          </div>
-                        )}
-                      </div>
+                        
                     </>
                   )}
 

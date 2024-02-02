@@ -50,6 +50,7 @@ const UserProfiles = () => {
             <th>City</th>
             <th>Contact Number</th>
             <th>Bank Account Number</th>
+            <th>IFSC</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -63,6 +64,7 @@ const UserProfiles = () => {
               <td>{profile.city}</td>
               <td>{profile.contactNumber}</td>
               <td>{profile.bankAccountNumber}</td>
+              <td>{profile.ifsc}</td>
               <td>
                 <button onClick={() => handleDelete(profile.username)}>Delete</button>
               </td>

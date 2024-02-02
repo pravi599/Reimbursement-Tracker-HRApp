@@ -42,7 +42,8 @@ namespace ReimbursementTrackerApp.Services
                     LastName = userProfileDTO.LastName,
                     City = userProfileDTO.City,
                     ContactNumber = userProfileDTO.ContactNumber,
-                    BankAccountNumber = userProfileDTO.BankAccountNumber
+                    BankAccountNumber = userProfileDTO.BankAccountNumber,
+                    IFSC = userProfileDTO.IFSC
                 };
 
                 _userProfileRepository.Add(userProfile);
@@ -88,6 +89,7 @@ namespace ReimbursementTrackerApp.Services
                 existingProfile.City = userProfileDTO.City;
                 existingProfile.ContactNumber = userProfileDTO.ContactNumber;
                 existingProfile.BankAccountNumber = userProfileDTO.BankAccountNumber;
+                existingProfile.IFSC = userProfileDTO.IFSC;
 
                 _userProfileRepository.Update(existingProfile);
 
@@ -99,7 +101,9 @@ namespace ReimbursementTrackerApp.Services
                     LastName = existingProfile.LastName,
                     City = existingProfile.City,
                     ContactNumber = existingProfile.ContactNumber,
-                    BankAccountNumber = existingProfile.BankAccountNumber
+                    BankAccountNumber = existingProfile.BankAccountNumber,
+                    IFSC = existingProfile.IFSC
+
                 };
             }
 
@@ -125,7 +129,8 @@ namespace ReimbursementTrackerApp.Services
                     LastName = userProfile.LastName,
                     City = userProfile.City,
                     ContactNumber = userProfile.ContactNumber,
-                    BankAccountNumber = userProfile.BankAccountNumber
+                    BankAccountNumber = userProfile.BankAccountNumber,
+                    IFSC = userProfile.IFSC
                 };
             }
 
@@ -152,7 +157,8 @@ namespace ReimbursementTrackerApp.Services
                     LastName = userProfile.LastName,
                     City = userProfile.City,
                     ContactNumber = userProfile.ContactNumber,
-                    BankAccountNumber = userProfile.BankAccountNumber
+                    BankAccountNumber = userProfile.BankAccountNumber,
+                    IFSC = userProfile.IFSC
                 };
             }
 
@@ -175,7 +181,8 @@ namespace ReimbursementTrackerApp.Services
                 LastName = u.LastName,
                 City = u.City,
                 ContactNumber = u.ContactNumber,
-                BankAccountNumber = u.BankAccountNumber
+                BankAccountNumber = u.BankAccountNumber,
+                IFSC = u.IFSC
             });
         }
     }

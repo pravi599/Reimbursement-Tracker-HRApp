@@ -13,6 +13,7 @@ namespace ReimbursementTrackerApp.Models
         public string City { get; set; }
         public string ContactNumber { get; set; }
         public string BankAccountNumber { get; set; }
+        public string IFSC { get;set; }
 
         [ForeignKey("Username")]
         public User? User { get; set; }

@@ -11,6 +11,7 @@ const AddProfile = () => {
     city: '',
     contactNumber: '',
     bankAccountNumber: '',
+    ifsc: ''
   });
 
   const [errors, setErrors] = useState({});
@@ -45,6 +46,9 @@ const AddProfile = () => {
       errors.bankAccountNumber = 'Please enter your bank account number.';
     } else if (!/^\d{15}$/.test(profileData.bankAccountNumber.trim())) {
       errors.bankAccountNumber = 'Bank Account Number must be 15 digits.';
+    }
+    if (!profileData.ifsc.trim()) {
+      errors.ifsc = 'Please enter your ifsc code.';
     }
 
     setErrors(errors);
@@ -175,6 +179,20 @@ const AddProfile = () => {
               className={`form-control ${errors.bankAccountNumber ? 'is-invalid' : ''}`}
             />
             {errors.bankAccountNumber && <div className="invalid-feedback">{errors.bankAccountNumber}</div>}
+          </div>
+          <div className="fieldContainer">
+            <label className="fieldLabel" htmlFor="ifsc">
+              IFSC:
+            </label>
+            <input
+              type="text"
+              id="ifsc"
+              name="ifsc"
+              value={profileData.ifsc}
+              onChange={handleInputChange}
+              className={`form-control ${errors.ifsc ? 'is-invalid' : ''}`}
+            />
+            {errors.ifsc && <div className="invalid-feedback">{errors.ifsc}</div>}
           </div>
 
           <div className="buttonContainer">

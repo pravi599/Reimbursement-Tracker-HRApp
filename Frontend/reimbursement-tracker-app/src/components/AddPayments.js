@@ -25,7 +25,11 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
     const fetchBankAccountNumber = async () => {
       try {
         const response = await axios.get(`https://localhost:7007/api/UserProfile/username/${request.username}`);
-        setPaymentData((prevData) => ({ ...prevData, BankAccountNumber: response.data.bankAccountNumber }));
+        setPaymentData((prevData) => ({
+          ...prevData,
+          BankAccountNumber: response.data.bankAccountNumber,
+          IFSC: response.data.ifsc,
+        }));
       } catch (error) {
         console.error('Error fetching bank account number:', error);
         // Handle the error as needed
@@ -85,6 +89,7 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
 
       localStorage.setItem('RequestId', response.data.RequestId);
       localStorage.setItem('PaymentId', response.data.PaymentId);
+      localStorage.setItem('IFSC', response.data.IFSC); // storing IFSC in local storage
       onClose();
     } catch (error) {
       console.error('Error adding payment:', error.response?.data);
@@ -116,6 +121,7 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
               name='BankAccountNumber'
               value={paymentData.BankAccountNumber}
               onChange={handleInputChange}
+              readOnly
             />
             {errors.BankAccountNumber && (
               <div className='error'>{errors.BankAccountNumber}</div>
@@ -130,6 +136,7 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
               name='IFSC'
               value={paymentData.IFSC}
               onChange={handleInputChange}
+              readOnly
             />
             {errors.IFSC && <div className='error'>{errors.IFSC}</div>}
           </div>
@@ -142,6 +149,7 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
               name='PaymentAmount'
               value={paymentData.PaymentAmount}
               onChange={handleInputChange}
+              readOnly
             />
             {errors.PaymentAmount && (
               <div className='error'>{errors.PaymentAmount}</div>

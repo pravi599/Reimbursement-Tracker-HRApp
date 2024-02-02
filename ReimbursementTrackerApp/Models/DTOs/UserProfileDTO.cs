@@ -11,6 +11,7 @@ namespace ReimbursementTrackerApp.Models.DTOs
         public string City { get; set; }
         public string ContactNumber { get; set; }
         public string BankAccountNumber { get; set; }
+        public string IFSC { get; set; }
 
     }
 }

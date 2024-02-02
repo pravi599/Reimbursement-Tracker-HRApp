@@ -12,7 +12,8 @@ const UserProfile = ({ match }) => {
         lastName: "",
         city: "",
         contactNumber: "",
-        bankAccountNumber: ""
+        bankAccountNumber: "",
+        ifsc: ""
     });
 
     const [isEditing, setIsEditing] = useState(false);
@@ -115,6 +116,18 @@ const UserProfile = ({ match }) => {
                             />
                         ) : (
                             userProfile.bankAccountNumber
+                        )}
+                    </p>
+                    <p>
+                        <strong>IFSC:</strong> {isEditing ? (
+                            <input
+                                type="text"
+                                name="ifsc"
+                                value={userProfile.ifsc}
+                                onChange={(e) => setUserProfile({ ...userProfile, ifsc: e.target.value })}
+                            />
+                        ) : (
+                            userProfile.ifsc
                         )}
                     </p>
                 </div>
