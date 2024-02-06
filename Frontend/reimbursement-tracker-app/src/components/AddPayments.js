@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AddPayments.css';
-
-const AddPayment = ({ onClose, amount, requestId, request }) => {
+import { message } from "antd";
+ 
+const AddPayment = ({ onClose, amount, requestId, request, username }) => {
   const currentDate = new Date();
   const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1)
     .toString()
     .padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}T${currentDate
-    .getHours()
-    .toString()
-    .padStart(2, '0')}:${currentDate.getMinutes().toString().padStart(2, '0')}`;
-
+      .getHours()
+      .toString()
+      .padStart(2, '0')}:${currentDate.getMinutes().toString().padStart(2, '0')}`;
+ 
   const [paymentData, setPaymentData] = useState({
     RequestId: requestId,
     BankAccountNumber: '',
@@ -18,9 +19,9 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
     PaymentAmount: amount,
     PaymentDate: formattedDate,
   });
-
+ 
   const [errors, setErrors] = useState({});
-
+ 
   useEffect(() => {
     const fetchBankAccountNumber = async () => {
       try {
@@ -35,58 +36,85 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
         // Handle the error as needed
       }
     };
-
+ 
     if (request) {
       fetchBankAccountNumber();
     }
   }, [request]);
-
+ 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setPaymentData({ ...paymentData, [name]: value });
     setErrors({ ...errors, [name]: undefined });
   };
-
+ 
   const validateForm = () => {
     const newErrors = {};
-
+ 
     if (!paymentData.BankAccountNumber.trim()) {
       newErrors.BankAccountNumber = 'Please enter a BankAccountNumber Number.';
     }
-
+ 
     if (!paymentData.IFSC.trim()) {
       newErrors.IFSC = 'Please enter a valid IFSC.';
     }
-
+ 
     if (!paymentData.PaymentAmount || paymentData.PaymentAmount <= 0) {
       newErrors.PaymentAmount = 'Please enter a valid Payment Amount.';
     }
-
+ 
     if (!paymentData.PaymentDate.trim()) {
       newErrors.PaymentDate = 'Please enter a valid Payment Date.';
     }
-
+ 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+ 
     if (!validateForm()) {
       alert('Please fill out the required fields correctly.');
       return;
     }
-
+ 
     try {
       const response = await axios.post(
         'https://localhost:7007/api/PaymentDetails',
         paymentData
       );
-
+ 
       console.log('Payment added successfully:', response.data);
       alert('Payment added successfully');
-
+ 
+      const toemail = localStorage.getItem("Payusername") || username; // Corrected
+ 
+      const responseEmail = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          service_id: 'service_n4mw93i',
+          template_id: 'template_hwohuhq',
+          user_id: 'yKBDhfI1SwLvmocO0',
+          template_params: {
+            to_email: toemail,
+            message: `Dear ${toemail},\n\nWe are pleased to inform you that your Payment successfully completed with Request ID ${requestId} of amount ${amount}.\n\nApproved Date: ${formattedDate}\nThank you for your prompt attention to this matter.`,
+            'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...',
+          },
+        }),
+      });
+ 
+      if (!responseEmail.ok) {
+        console.error('EmailJS request failed:', responseEmail.statusText);
+        // Handle the error as needed
+      } else {
+        message.success('Email sent successfully!');
+        // Handle success
+      }
+ 
       localStorage.setItem('RequestId', response.data.RequestId);
       localStorage.setItem('PaymentId', response.data.PaymentId);
       localStorage.setItem('IFSC', response.data.IFSC); // storing IFSC in local storage
@@ -96,7 +124,7 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
       alert('Failed to add payment. Please try again.');
     }
   };
-
+ 
   return (
     <div className='container'>
       <h2 className='heading'>Add Payment</h2>
@@ -112,7 +140,7 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
               readOnly
             />
           </div>
-
+ 
           <div>
             <label htmlFor='BankAccountNumber'>BankAccount Number:</label>
             <input
@@ -127,7 +155,7 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
               <div className='error'>{errors.BankAccountNumber}</div>
             )}
           </div>
-
+ 
           <div>
             <label htmlFor='IFSC'>IFSC:</label>
             <input
@@ -140,7 +168,7 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
             />
             {errors.IFSC && <div className='error'>{errors.IFSC}</div>}
           </div>
-
+ 
           <div>
             <label htmlFor='PaymentAmount'>Payment Amount:</label>
             <input
@@ -155,7 +183,7 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
               <div className='error'>{errors.PaymentAmount}</div>
             )}
           </div>
-
+ 
           <div>
             <label htmlFor='PaymentDate'>Payment Date:</label>
             <input
@@ -168,7 +196,7 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
             />
             {errors.PaymentDate && <div className='error'>{errors.PaymentDate}</div>}
           </div>
-
+ 
           <button type='submit'>Add Payment</button>
           <button onClick={onClose}>Cancel</button>
         </form>
@@ -176,5 +204,5 @@ const AddPayment = ({ onClose, amount, requestId, request }) => {
     </div>
   );
 };
-
+ 
 export default AddPayment;
