@@ -1267,3 +1267,4 @@ C:\Users\2000112352\Downloads\Project\Reimbursement-Tracker-HRApp-master\Reimbur
 C:\Users\2000112352\Downloads\Project\Reimbursement-Tracker-HRApp-master\ReimbursementTrackerApp\obj\Debug\net6.0\ReimbursementTrackerApp.pdb
 C:\Users\2000112352\Downloads\Project\Reimbursement-Tracker-HRApp-master\ReimbursementTrackerApp\obj\Debug\net6.0\ReimbursementTrackerApp.genruntimeconfig.cache
 C:\Users\2000112352\Downloads\Project\Reimbursement-Tracker-HRApp-master\ReimbursementTrackerApp\obj\Debug\net6.0\ref\ReimbursementTrackerApp.dll
+C:\Users\2000112352\Downloads\Project\Reimbursement-Tracker-HRApp-master\ReimbursementTrackerApp\obj\Debug\net6.0\ReimbursementTrackerApp.sourcelink.json

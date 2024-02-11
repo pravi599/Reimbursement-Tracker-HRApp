@@ -1,78 +1,72 @@
+/* Add these styles to your Home.css file */
+
 .home-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
-  padding: 140px 20px; /* Adjust padding for smaller screens */
   
 }
 
 header {
-  margin-bottom: 30px;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-p {
-  color: #000000;
-  margin-bottom: 30px;
+  background-color: #3498db;
+  padding-top: 80px;
+  color: #fff;
+  margin:40px;
 }
 
 .features {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 20px;
 }
 
 .feature {
-  flex: 1;
-  box-sizing: border-box;
-  padding: 20px;
-  background-color: transparent;
-  border-color: dodgerblue;
-  border-style:groove;
-  border-width: 2px;
+  background-color: #ecf0f1;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 0 10px 20px; /* Add space between features */
+  margin: 10px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature a {
+  text-decoration: none;
+  color: #333;
 }
 
 .feature h2 {
-  font-size: 1.5rem;
-  color: #090303;
   margin-bottom: 10px;
+  color: #3498db;
 }
 
-.feature p {
-  font-size: 1rem;
-  color: #050000;
+/* Animation for header text */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
+header h1, header p {
+  animation: fadeInDown 1s;
+}
 
-  p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
   .feature {
-    flex: none;
     width: 100%;
-    margin: 0 0 20px; /* Adjust margin for smaller screens */
-  }
-
-  .feature h2 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-
-  .feature p {
-    font-size: 0.9rem;
   }
 }

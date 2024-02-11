@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './GetPayments.css'
+import './GetPayments.css';
+
 const GetPayments = () => {
   // State variables
   const [paymentData, setPaymentData] = useState([]);
@@ -32,43 +33,32 @@ const GetPayments = () => {
     }
   };
 
+  // Use useEffect to fetch payments automatically when the component mounts
+  useEffect(() => {
+    fetchPaymentDetails();
+  }, []); // The empty dependency array ensures this effect runs once when the component mounts
+
   // JSX for rendering the component
   return (
     <div>
       <h2>Payment Details</h2>
 
-      <button onClick={fetchPaymentDetails} disabled={loading} className='btnn'>
-        Get All Payments
-      </button>
-
       {loading && <p>Loading payment details...</p>}
 
       {error && <p style={{ color: 'red' }}>{error}</p>}
 
-      <table>
-        <thead>
-          <tr>
-            <th>Payment ID</th>
-            <th>Request ID</th>
-            <th>BankAccount Number</th>
-            <th>IFSC</th>
-            <th>Payment Amount</th>
-            <th>Payment Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          {paymentData.map((payment) => (
-            <tr key={payment.paymentId}>
-              <td>{payment.paymentId}</td>
-              <td>{payment.requestId}</td>
-              <td>{payment.bankAccountNumber}</td>             
-              <td>{payment.ifsc}</td>
-              <td>{payment.paymentAmount}</td>
-              <td>{payment.paymentDate}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="payment-tiles">
+        {paymentData.map((payment) => (
+          <div key={payment.paymentId} className="payment-tile">
+            <h3>Payment ID: {payment.paymentId}</h3>
+            <p>Request ID: {payment.requestId}</p>
+            <p>Bank Account Number: {payment.bankAccountNumber}</p>
+            <p>IFSC: {payment.ifsc}</p>
+            <p>Payment Amount: {payment.paymentAmount}</p>
+            <p>Payment Date: {payment.paymentDate}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

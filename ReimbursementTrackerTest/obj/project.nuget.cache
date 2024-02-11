@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vRuO3BE4W/c7xO884FupjJjxLD8MXiKgJNS6RioUd2ErHas2RyDzgAPDwQAYtE5VUiuenyrZuL3Ui82jiPSBlQ==",
+  "dgSpecHash": "5zo6zAGPJaZjVvSXnJz4x7Is9cpk22ppqk6i24l/62fWgeQ0tUGPupFItzFbghBsLs0dfTXxriYg7uj44N4bXQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerTest\\ReimbursementTrackerTest.csproj",
   "expectedPackageFiles": [
@@ -190,7 +190,10 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\2000112352\\.nuget\\packages\\system.threading.tasks.dataflow\\6.0.0\\system.threading.tasks.dataflow.6.0.0.nupkg.sha512",
     "C:\\Users\\2000112352\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\2000112352\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\2000112352\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\2000112352\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\2000112352\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\2000112352\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Q6skR+5qG/15Qq/37p8QEqvrxK8x6SAb6Zu/0WaqzhsHNZIa9pSgpHgj2w/d//6g5G3CgtijdnwC7ndWOrv3qA==",
+  "dgSpecHash": "09qQva2uQWiyzxhzjO+zQO8P/H7FrzU3Uuya5GH4v54aXb0sNn+7h/WG4jwrwB/zo6+kef7+YN6iYkY+H35I6g==",
   "success": true,
   "projectFilePath": "C:\\Users\\2000112352\\Downloads\\Project\\Reimbursement-Tracker-HRApp-master\\ReimbursementTrackerApp\\ReimbursementTrackerApp.csproj",
   "expectedPackageFiles": [
@@ -229,7 +229,11 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\2000112352\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\2000112352\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\2000112352\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\2000112352\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\2000112352\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.26\\microsoft.netcore.app.host.win-x64.6.0.26.nupkg.sha512"
   ],
   "logs": []
 }

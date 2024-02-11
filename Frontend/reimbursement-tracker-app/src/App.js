@@ -21,25 +21,26 @@ import Tracking from './components/Tracking';
 const access_token = localStorage.getItem("token");
 axios.defaults.headers.common['Authorization'] = `Bearer ${access_token}`;
 function App() {
-  
+
   return (
     <div>
       <BrowserRouter>
         <Menu />
         <Routes>
-        <Route path='/Home' element={<Home/>} />
+          <Route path="/" element={<Home />} />
+          <Route path='/Home' element={<Home />} />
           <Route path='/Login' element={<Login />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/add-profile" element={<AddProfile />} />
           <Route path="/user-profile" element={<UserProfile />} />
           <Route path="/update-profile" element={<UpdateProfile />} />
           <Route path="/user-profiles" element={<UserProfiles />} />
-          <Route path="/add-request" element={<AddRequest/>} />
-          <Route path="/requests" element={<Requests/>} />
-          <Route path="/AddPayment" element={<AddPayment/>}/>
-          <Route path="/GetPayments" element={<GetPayments/>}/>
-          <Route path="/UserRequests" element={<UserRequests/>}/>
-          <Route path="/Tracking" element={<Tracking/>}/>
+          <Route path="/add-request" element={<AddRequest />} />
+          <Route path="/requests" element={<Requests />} />
+          <Route path="/AddPayment" element={<AddPayment />} />
+          <Route path="/GetPayments" element={<GetPayments />} />
+          <Route path="/UserRequests" element={<UserRequests />} />
+          <Route path="/Tracking" element={<Tracking />} />
 
         </Routes>
       </BrowserRouter>

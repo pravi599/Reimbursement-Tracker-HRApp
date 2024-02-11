@@ -26,11 +26,9 @@ const UserProfiles = () => {
     if (confirmDelete) {
       try {
         await axios.delete(`https://localhost:7007/api/UserProfile/${username}`);
-        // If deletion is successful, update the userProfiles state to reflect the changes
         setUserProfiles((prevProfiles) => prevProfiles.filter((profile) => profile.username !== username));
       } catch (error) {
         console.error('Error deleting user profile:', error);
-        // Handle error, e.g., show an error message
       }
     }
   };
@@ -40,38 +38,21 @@ const UserProfiles = () => {
       <h2>User Profiles</h2>
       {error && <div className="error">{error}</div>}
 
-      <table className="userProfilesTable">
-        <thead>
-          <tr>
-            <th>User ID</th>
-            <th>Username</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>City</th>
-            <th>Contact Number</th>
-            <th>Bank Account Number</th>
-            <th>IFSC</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {userProfiles.map((profile) => (
-            <tr key={profile.userId}>
-              <td>{profile.userId}</td>
-              <td>{profile.username}</td>
-              <td>{profile.firstName}</td>
-              <td>{profile.lastName}</td>
-              <td>{profile.city}</td>
-              <td>{profile.contactNumber}</td>
-              <td>{profile.bankAccountNumber}</td>
-              <td>{profile.ifsc}</td>
-              <td>
-                <button onClick={() => handleDelete(profile.username)}>Delete</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="userProfilesList">
+        {userProfiles.map((profile) => (
+          <div className="userProfileCard" key={profile.userId}>
+            <p><strong>User ID:</strong> {profile.userId}</p>
+            <p><strong>Username:</strong> {profile.username}</p>
+            <p><strong>First Name:</strong> {profile.firstName}</p>
+            <p><strong>Last Name:</strong> {profile.lastName}</p>
+            <p><strong>City:</strong> {profile.city}</p>
+            <p><strong>Contact Number:</strong> {profile.contactNumber}</p>
+            <p><strong>Bank Account Number:</strong> {profile.bankAccountNumber}</p>
+            <p><strong>IFSC:</strong> {profile.ifsc}</p>
+            <button onClick={() => handleDelete(profile.username)}>Delete</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

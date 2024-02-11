@@ -47,6 +47,9 @@ const Menu = () => {
     <div className="header">
       <div className="center-container">
         <div className="nav-links">
+        <div className="brand brand-head">
+          <h1>Reimbursement Tracker</h1>
+        </div>
           <div className="menu-icon" onClick={toggleMenu}>
             <FaBars />
           </div>
