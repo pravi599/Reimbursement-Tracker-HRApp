@@ -95,7 +95,7 @@ const Requests = () => {
   };
 
   return (
-    <div>
+    <div className='bg-container'>
       <h2 className="blue-color">Requests</h2>
       <div className='container'>
         <input

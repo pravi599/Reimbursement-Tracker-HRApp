@@ -1,5 +1,7 @@
 /* Requests.css */
-
+.bg-container{
+  padding-top: 80px;
+}
 .blue-color {
   color: #1e78ff; /* Blue color */
 }
@@ -8,9 +10,7 @@
   max-width: 900px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #f8f8f8;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: #000; /* Set text color to black */
 }
 

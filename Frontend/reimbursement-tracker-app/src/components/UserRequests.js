@@ -127,7 +127,7 @@ const UserRequests = () => {
   };
 
   return (
-    <div>
+    <div class='bg-container'>
       <h2>User Requests</h2>
       <div className="request-container">
         {userRequests.map((request) => (

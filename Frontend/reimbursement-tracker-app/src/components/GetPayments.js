@@ -40,7 +40,7 @@ const GetPayments = () => {
 
   // JSX for rendering the component
   return (
-    <div>
+    <div className='bg-container'>
       <h2>Payment Details</h2>
 
       {loading && <p>Loading payment details...</p>}
